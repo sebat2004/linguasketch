@@ -3,9 +3,10 @@ import { View, Text } from 'react-native'
 
 const index = () => {
   return (
-    <View>
+    <View style={{}}>
       <Text>Hi</Text>
-      <Link href="/modes">Get Start</Link>
+      <Link href="/practice">Go to practice</Link>
+      <Link href="/canvas">Go to canvas</Link>
     </View>
   )
 }
