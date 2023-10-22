@@ -4,7 +4,7 @@ import React from 'react'
 const categories = () => {
   return (
     <View>
-      <Text>categories</Text>
+      <Text>Pick a Category!</Text>
     </View>
   )
 }
