@@ -1,0 +1,80 @@
+{
+    "transportation": {
+        "car": {"spanish": "coche", "french": "voiture", "chinese": "汽车", "german": "Auto", "korean": "자동차"},
+        "bus": {"spanish": "autobús", "french": "bus", "chinese": "公交车", "german": "Bus", "korean": "버스"},
+        "bicycle": {"spanish": "bicicleta", "french": "vélo", "chinese": "自行车", "german": "Fahrrad", "korean": "자전거"},
+        "train": {"spanish": "tren", "french": "train", "chinese": "火车", "german": "Zug", "korean": "기차"},
+        "airplane": {"spanish": "avión", "french": "avion", "chinese": "飞机", "german": "Flugzeug", "korean": "비행기"},
+        "boat": {"spanish": "bote", "french": "bateau", "chinese": "船", "german": "Boot", "korean": "보트"},
+        "subway": {"spanish": "metro", "french": "métro", "chinese": "地铁", "german": "U-Bahn", "korean": "지하철"},
+        "taxi": {"spanish": "taxi", "french": "taxi", "chinese": "出租车", "german": "Taxi", "korean": "택시"},
+        "truck": {"spanish": "camión", "french": "camion", "chinese": "卡车", "german": "Lkw", "korean": "트럭"},
+        "scooter": {"spanish": "scooter", "french": "scooter", "chinese": "滑板车", "german": "Roller", "korean": "스쿠터"},
+        "helicopter": {"spanish": "helicoptero", "french": "hélicoptère", "chinese": "直升机", "german": "Hubschrauber", "korean": "헬리콥터"},
+    },
+
+    "clothing": {
+        "shirt": {"spanish": "camisa", "french": "chemise", "chinese": "衬衫", "german": "Hemd", "korean": "셔츠"},
+        "pants": {"spanish": "pantalones", "french": "pantalon", "chinese": "裤子", "german": "Hose", "korean": "바지"},
+        "dress": {"spanish": "vestido", "french": "robe", "chinese": "裙子", "german": "Kleid", "korean": "드레스"},
+        "shoes": {"spanish": "zapatos", "french": "chaussures", "chinese": "鞋", "german": "Schuhe", "korean": "신발"},
+        "hat": {"spanish": "sombrero", "french": "chapeau", "chinese": "帽子", "german": "Hut", "korean": "모자"},
+        "jacket": {"spanish": "chaqueta", "french": "veste", "chinese": "夹克", "german": "Jacke", "korean": "자켓"},
+        "sweater": {"spanish": "suéter", "french": "pull", "chinese": "毛衣", "german": "Pullover", "korean": "스웨터"},
+        "socks": {"spanish": "calcetines", "french": "chaussettes", "chinese": "袜子", "german": "Socken", "korean": "양말"},
+        "scarf": {"spanish": "bufanda", "french": "écharpe", "chinese": "围巾", "german": "Schal", "korean": "스카프"},
+        "gloves": {"spanish": "guantes", "french": "gants", "chinese": "手套", "german": "Handschuhe", "korean": "장갑"}
+    },
+      
+    "colors": {
+        "red": {"spanish": "rojo", "french": "rouge", "chinese": "红色", "german": "rot", "korean": "빨간색"},
+        "blue": {"spanish": "azul", "french": "bleu", "chinese": "蓝色", "german": "blau", "korean": "파란색"},
+        "yellow": {"spanish": "amarillo", "french": "jaune", "chinese": "黄色", "german": "gelb", "korean": "노란색"},
+        "green": {"spanish": "verde", "french": "vert", "chinese": "绿色", "german": "grün", "korean": "초록색"},
+        "black": {"spanish": "negro", "french": "noir", "chinese": "黑色", "german": "schwarz", "korean": "검은색"},
+        "white": {"spanish": "blanco", "french": "blanc", "chinese": "白色", "german": "weiß", "korean": "하얀색"},
+        "purple": {"spanish": "morado", "french": "violet", "chinese": "紫色", "german": "lila", "korean": "보라색"},
+        "orange": {"spanish": "naranja", "french": "orange", "chinese": "橙色", "german": "orange", "korean": "주황색"},
+        "pink": {"spanish": "rosa", "french": "rose", "chinese": "粉红色", "german": "rosa", "korean": "분홍색"},
+        "brown": {"spanish": "marrón", "french": "marron", "chinese": "棕色", "german": "braun", "korean": "갈색"}
+    },
+    
+    "food": {
+        "apple": {"spanish": "manzana", "french": "pomme", "chinese": "苹果", "german": "Apfel", "korean": "사과"},
+        "bread": {"spanish": "pan", "french": "pain", "chinese": "面包", "german": "Brot", "korean": "빵"},
+        "chicken": {"spanish": "pollo", "french": "poulet", "chinese": "鸡", "german": "Huhn", "korean": "닭고기"},
+        "rice": {"spanish": "arroz", "french": "riz", "chinese": "米饭", "german": "Reis", "korean": "밥"},
+        "milk": {"spanish": "leche", "french": "lait", "chinese": "牛奶", "german": "Milch", "korean": "우유"},
+        "eggs": {"spanish": "huevos", "french": "œufs", "chinese": "鸡蛋", "german": "Eier", "korean": "계란"},
+        "cheese": {"spanish": "queso", "french": "fromage", "chinese": "奶酪", "german": "Käse", "korean": "치즈"},
+        "fish": {"spanish": "pescado", "french": "poisson", "chinese": "鱼", "german": "Fisch", "korean": "생선"},
+        "beef": {"spanish": "carne de res", "french": "bœuf", "chinese": "牛肉", "german": "Rindfleisch", "korean": "소고기"},
+        "pasta": {"spanish": "pasta", "french": "pâtes", "chinese": "面条", "german": "Nudeln", "korean": "파스타"}
+    },
+    
+    "occupations": {
+        "teacher": {"spanish": "profesor", "french": "enseignant", "chinese": "老师", "german": "Lehrer", "korean": "선생님"},
+        "doctor": {"spanish": "médico", "french": "médecin", "chinese": "医生", "german": "Arzt", "korean": "의사"},
+        "engineer": {"spanish": "ingeniero", "french": "ingénieur", "chinese": "工程师", "german": "Ingenieur", "korean": "기사"},
+        "nurse": {"spanish": "enfermera", "french": "infirmière", "chinese": "护士", "german": "Krankenschwester", "korean": "간호사"},
+        "lawyer": {"spanish": "abogado", "french": "avocat", "chinese": "律师", "german": "Anwalt", "korean": "변호사"},
+        "chef": {"spanish": "chef", "french": "chef", "chinese": "厨师", "german": "Koch", "korean": "셰프"},
+        "pilot": {"spanish": "piloto", "french": "pilote", "chinese": "飞行员", "german": "Pilot", "korean": "조종사"},
+        "farmer": {"spanish": "granjero", "french": "agriculteur", "chinese": "农民", "german": "Bauer", "korean": "농부"},
+        "musician": {"spanish": "músico", "french": "musicien", "chinese": "音乐家", "german": "Musiker", "korean": "음악가"},
+        "artist": {"spanish": "artista", "french": "artiste", "chinese": "艺术家", "german": "Künstler", "korean": "예술가"}
+    },
+    
+    "sports": {
+        "soccer": {"spanish": "fútbol", "french": "football", "chinese": "足球", "german": "Fußball", "korean": "축구"},
+        "basketball": {"spanish": "baloncesto", "french": "basket-ball", "chinese": "篮球", "german": "Basketball", "korean": "농구"},
+        "tennis": {"spanish": "tenis", "french": "tennis", "chinese": "网球", "german": "Tennis", "korean": "테니스"},
+        "baseball": {"spanish": "béisbol", "french": "base-ball", "chinese": "棒球", "german": "Baseball", "korean": "야구"},
+        "volleyball": {"spanish": "voleibol", "french": "volley-ball", "chinese": "排球", "german": "Volleyball", "korean": "배구"},
+        "golf": {"spanish": "golf", "french": "golf", "chinese": "高尔夫", "german": "Golf", "korean": "골프"},
+        "swimming": {"spanish": "natación", "french": "natation", "chinese": "游泳", "german": "Schwimmen", "korean": "수영"},
+        "boxing": {"spanish": "boxeo", "french": "boxe", "chinese": "拳击", "german": "Boxen", "korean": "복싱"},
+        "hockey": {"spanish": "hockey", "french": "hockey", "chinese": "曲棍球", "german": "Hockey", "korean": "하키"},
+        "badminton": {"spanish": "bádminton", "french": "badminton", "chinese": "羽毛球", "german": "Badminton", "korean": "배드민턴"}
+      }
+}
