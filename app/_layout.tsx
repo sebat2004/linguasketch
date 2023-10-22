@@ -6,14 +6,14 @@ export {
 } from 'expo-router';
 
 export const unstable_settings = {
-  initialRouteName: 'landing',
+  initialRouteName: 'index',
 };
 
 export default function RootLayoutNav() {
 
   return (
     <Stack>
-      <Stack.Screen name="landing" options={{
+      <Stack.Screen name="index" options={{
         headerShown: false
       }} />
     </Stack>
