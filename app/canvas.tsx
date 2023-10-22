@@ -1,9 +1,8 @@
-import {useEffect, useState, useRef} from "react";
-import {Canvas, Image, PaintStyle, useCanvasRef, Circle, Fill, Path, SkiaMutableValue, useValue, useTouchHandler, Skia, SkPath} from "@shopify/react-native-skia";
+import { useState, useRef } from "react";
+import { Canvas, PaintStyle, useCanvasRef, Fill, Path, useTouchHandler, Skia, SkPath } from "@shopify/react-native-skia";
  
-import { View, Text, Button } from 'react-native'
+import { View, Button } from 'react-native'
 import React from 'react'
-import { getBackgroundColorAsync } from "expo-system-ui";
 
 const penPaint = () => {
   const paint = Skia.Paint();
@@ -58,7 +57,9 @@ const canvas = () => {
           return <Path key={index} path={delta} style="stroke" strokeWidth={4} color="#3EB489" />
         })}
       </Canvas>
-      <Button onPress={undo} title="Undo" color="#841584" />
+      <View style={{flex: 1}}>
+        <Button onPress={undo} title="Undo" color="#841584" />
+      </View>      
     </View>
   );
 }
