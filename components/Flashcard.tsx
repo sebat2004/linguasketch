@@ -20,8 +20,8 @@ const Flashcard = (props: FlashcardProps) => {
     const translations = Object.keys(englishWords);
     const words = Object.keys(languageWords);
     const randomIndex = Math.floor(Math.random() * words.length);
-    const translation = translations[randomIndex + 1];
-    const word = words[randomIndex + 1];
+    const translation = translations[randomIndex];
+    const word = words[randomIndex];
 
     return (
       <View style={{ backgroundColor: 'white', width: 300 }}>
