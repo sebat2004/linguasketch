@@ -1,8 +1,13 @@
 import { useState, useRef } from "react";
-import { Canvas, PaintStyle, useCanvasRef, Fill, Path, useTouchHandler, Skia, SkPath } from "@shopify/react-native-skia";
+import { Canvas, PaintStyle, useCanvasRef, Fill, Path, useTouchHandler, Skia, SkPath, SkPaint } from "@shopify/react-native-skia";
  
-import { View, Button } from 'react-native'
+import { View, Text, Button } from 'react-native'
 import React from 'react'
+
+type Delta = {
+  path: SkPath;
+  paint: SkPaint;
+};
 
 const penPaint = () => {
   const paint = Skia.Paint();
@@ -18,7 +23,7 @@ const eraserPaint = () => {
   const paint = Skia.Paint();
 
   paint.setStyle(PaintStyle.Stroke);
-  paint.setStrokeWidth(4);
+  paint.setStrokeWidth(12);
   paint.setColor(Skia.Color("#FFFFFF"));
 
   return paint;
@@ -26,7 +31,7 @@ const eraserPaint = () => {
 
 const canvas = () => {
   const ref = useCanvasRef();
-  const [deltas, setDeltas] = useState<SkPath[]>([]);
+  const [deltas, setDeltas] = useState<Delta[]>([]);
   const [erase, setErase] = useState<boolean>(false);
   const cPath = useRef<SkPath | null>(null);
   
@@ -35,7 +40,10 @@ const canvas = () => {
         cPath.current = Skia.Path.Make();
         cPath.current.moveTo(x, y);
 
-        setDeltas(values => values.concat(cPath.current!));
+        setDeltas(values => values.concat({
+          path: cPath.current!,
+          paint: erase ? eraserPaint() : penPaint()
+        }));
       },
       onActive: ({ x, y }) => {
         cPath.current!.lineTo(x, y);
@@ -54,11 +62,15 @@ const canvas = () => {
       <Canvas style={{width: 200, height: 150}} onTouch={touchHandler} ref={ref}>
         <Fill color="white" />
         {deltas.map((delta, index) => {
-          return <Path key={index} path={delta} style="stroke" strokeWidth={4} color="#3EB489" />
+          return <Path key={index} path={delta.path} paint={delta.paint} />
         })}
       </Canvas>
-      <View style={{flex: 1}}>
+      <View style={{}}>
+        <Text>Hi</Text>
+        <Text>{erase}</Text>
         <Button onPress={undo} title="Undo" color="#841584" />
+        <Button onPress={() => setErase(prev => false)} title="Draw" color="#841584" />
+        <Button onPress={() => setErase(prev => true)} title="Erase" color="#841584" />
       </View>      
     </View>
   );
