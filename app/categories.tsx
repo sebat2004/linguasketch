@@ -1,11 +1,10 @@
 import { View, Text } from 'react-native'
-import { Link, useGlobalSearchParams } from 'expo-router'
+import { Link, useLocalSearchParams } from 'expo-router'
 import React, { useState } from 'react'
 
 const categories = () => {
-  const language: any = useGlobalSearchParams() 
-  const [category, setCategory] = useState('sports');
-  console.log(language)
+  const params: any = useLocalSearchParams() 
+  const [language, setLanguage] = useState(params.language)
 
   return (
     <View>
@@ -13,11 +12,10 @@ const categories = () => {
         href={{
           pathname: "/flashcard",
           params: {
-            category: category,
-            language: language
+            language: language,
+            category: 'transportation'
           }
         }}
-        onPress={() => setCategory('transportation')}
       >
         Transportation
       </Link>
@@ -25,11 +23,10 @@ const categories = () => {
         href={{
           pathname: "/flashcard",
           params: {
-            category: category,
-            language: language
+            language: language,
+            category: 'colors'
           }
         }}
-        onPress={() => setCategory('colors')}
       >
         Colors
       </Link>
@@ -37,11 +34,10 @@ const categories = () => {
         href={{
           pathname: "/flashcard",
           params: {
-            category: category,
-            language: language
+            language: language,
+            category: 'food'
           }
         }}
-        onPress={() => setCategory('food')}
       >
         Food
       </Link>
@@ -49,11 +45,10 @@ const categories = () => {
         href={{
           pathname: "/flashcard",
           params: {
-            category: category,
-            language: language
+            language: language,
+            category: 'clothing'
           }
         }}
-        onPress={() => setCategory('clothing')}
       >
         Clothing
       </Link>
@@ -61,11 +56,10 @@ const categories = () => {
         href={{
           pathname: "/flashcard",
           params: {
-            category: category,
-            language: language
+            language: language,
+            category: 'occupations'
           }
         }}
-        onPress={() => setCategory('occupations')}
       >
         Occupations
       </Link>
@@ -73,11 +67,10 @@ const categories = () => {
         href={{
           pathname: "/flashcard",
           params: {
-            category: category,
-            language: language
+            language: language,
+            category: 'sports'
           }
         }}
-        onPress={() => setCategory('sports')}
       >
         Sports
       </Link>

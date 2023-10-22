@@ -10,7 +10,7 @@ const languges = () => {
       <Link
         href={{
           pathname: "/categories",
-          params: { language: language }
+          params: { language: 'spanish' }
         }}
         onPress={() => setLanguage('spanish')}
       >
@@ -19,7 +19,7 @@ const languges = () => {
       <Link 
         href={{
           pathname: "/categories",
-          params: { language: language }
+          params: { language: 'french' }
         }}
         onPress={() => setLanguage('french')}
       >
@@ -28,7 +28,7 @@ const languges = () => {
       <Link 
         href={{
           pathname: "/categories",
-          params: { language: language }
+          params: { language: 'chinese' }
         }}
         onPress={() => setLanguage('chinese')}
       >
@@ -37,7 +37,7 @@ const languges = () => {
       <Link 
         href={{
           pathname: "/categories",
-          params: { language: language }
+          params: { language: 'german' }
         }}
         onPress={() => setLanguage('german')}
       >
@@ -46,7 +46,7 @@ const languges = () => {
       <Link 
         href={{
           pathname: "/categories",
-          params: { language: language }
+          params: { language: 'korean' }
         }}
         onPress={() => setLanguage('korean')}
       >

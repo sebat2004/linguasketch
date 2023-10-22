@@ -8,18 +8,18 @@ const landing = () => {
     return (
         <>
           <LinearGradient
-            colors={['#D69D5B', '#E8D6C9']}
+            colors={['#D69D5B', '#E8D6B9']}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={styles.linearGradient}
           >
             <Image
             source={require('../assets/images/beav.png')}
-            style={{width: 225, height: 210, marginTop: 130, alignSelf: 'center'}}   
+            style={{width: 275, height: 255, marginTop: 105, alignSelf: 'center'}}   
             />
             <Text style={{fontSize: 40, fontWeight: '300', marginTop: 100, alignSelf: 'center'}}>LinguaSketch</Text>
             <Ionicons/>
-            <Link href="/languges">Go to Languages</Link>
+            <Link href="/languges" style={{alignSelf: 'center', marginTop: 50}}>Go to languages.</Link>
           </LinearGradient>
         </>
       );
