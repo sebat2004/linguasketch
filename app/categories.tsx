@@ -10,7 +10,7 @@ const categories = () => {
     <View>
       <Link 
         href={{
-          pathname: "/canvas",
+          pathname: "/drawing",
           params: {
             language: language,
             category: 'transportation'
@@ -21,7 +21,7 @@ const categories = () => {
       </Link>
       <Link 
         href={{
-          pathname: "/canvas",
+          pathname: "/drawing",
           params: {
             language: language,
             category: 'colors'
@@ -32,7 +32,7 @@ const categories = () => {
       </Link>
       <Link 
         href={{
-          pathname: "/canvas",
+          pathname: "/drawing",
           params: {
             language: language,
             category: 'food'
@@ -43,7 +43,7 @@ const categories = () => {
       </Link>
       <Link 
         href={{
-          pathname: "/canvas",
+          pathname: "/drawing",
           params: {
             language: language,
             category: 'clothing'
@@ -54,7 +54,7 @@ const categories = () => {
       </Link>
       <Link 
         href={{
-          pathname: "/canvas",
+          pathname: "/drawing",
           params: {
             language: language,
             category: 'occupations'
@@ -65,7 +65,7 @@ const categories = () => {
       </Link>
       <Link 
         href={{
-          pathname: "/canvas",
+          pathname: "/drawing",
           params: {
             language: language,
             category: 'sports'
