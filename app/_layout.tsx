@@ -1,4 +1,4 @@
-import { SplashScreen, Stack } from 'expo-router';
+import { Stack } from 'expo-router';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -6,7 +6,6 @@ export {
 } from 'expo-router';
 
 export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
   initialRouteName: 'landing',
 };
 
@@ -14,7 +13,9 @@ export default function RootLayoutNav() {
 
   return (
     <Stack>
-      <Stack.Screen name="landing" options={{}} />
+      <Stack.Screen name="landing" options={{
+        headerShown: false
+      }} />
     </Stack>
   );
 }
