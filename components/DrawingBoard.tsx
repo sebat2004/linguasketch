@@ -1,13 +1,20 @@
 import { useState, useRef } from "react";
 import { Canvas, PaintStyle, useCanvasRef, Fill, Path, useTouchHandler, Skia, SkPath, SkPaint } from "@shopify/react-native-skia";
- 
-import { View, Text, Button } from 'react-native'
-import React from 'react'
+import { FlashcardProps } from './Flashcard';
+import { View, Text, Button } from 'react-native';
+import React from 'react';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 type Delta = {
   path: SkPath;
   paint: SkPaint;
 };
+
+type RawDelta = {
+  svgStr: string;
+  width: number;
+  color: string;
+}
 
 const penPaint = () => {
   const paint = Skia.Paint();
@@ -29,12 +36,12 @@ const eraserPaint = () => {
   return paint;
 }
 
-const DrawingBoard = () => {
+const DrawingBoard = (props: FlashcardProps) => {
   const ref = useCanvasRef();
   const [deltas, setDeltas] = useState<Delta[]>([]);
   const cPaint = useRef<SkPaint>(penPaint());
   const cPath = useRef<SkPath | null>(null);
-  
+
   const touchHandler = useTouchHandler({
       onStart: ({ x, y }) => {
         cPath.current = Skia.Path.Make();
@@ -66,6 +73,44 @@ const DrawingBoard = () => {
   const setPen = () => {
     cPaint.current = penPaint();
   }
+
+  const save = async () => {
+    const pData: string[] = deltas.map((value) => {
+      return JSON.stringify({
+        svgStr: value.path.toSVGString(),
+        width: value.paint.getStrokeWidth(),
+        color: value.paint.getColor().toString()
+      });
+    });
+    
+    await AsyncStorage.setItem(props.word, JSON.stringify(pData));
+  }
+
+  const pull = async () => {
+    const rIRead = await AsyncStorage.getItem(props.word);
+
+    if(rIRead){
+      const uPArr: string[] = JSON.parse(rIRead);
+      const nDeltas: Delta[] = uPArr.map((value) => {
+        const rawDelta: RawDelta = JSON.parse(value);
+        const rawPaint: SkPaint = Skia.Paint();
+        const rawColor: number[] = rawDelta.color.split(',').map((value) => parseFloat(value));
+
+        rawPaint.setStyle(PaintStyle.Stroke);
+        rawPaint.setStrokeWidth(rawDelta.width);        
+        rawPaint.setColor(new Float32Array(rawColor));
+
+        const fDelta: Delta = {
+          path: Skia.Path.MakeFromSVGString(rawDelta.svgStr)!,
+          paint: rawPaint
+        };
+
+        return fDelta;
+      });
+
+      setDeltas(nDeltas);
+    }
+  }
  
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
@@ -80,7 +125,9 @@ const DrawingBoard = () => {
         <Button onPress={undo} title="Undo" color="#841584" />
         <Button onPress={setPen} title="Draw" color="#841584" />
         <Button onPress={setEraser} title="Erase" color="#841584" />
-      </View>      
+        <Button onPress={save} title="Save" color="#841584" />
+        <Button onPress={pull} title="Pull" color="#841584" />
+      </View>   
     </View>
   );
 }

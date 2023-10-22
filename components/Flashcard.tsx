@@ -4,7 +4,8 @@ import vocab from '../app/vocab.json'
 
 type FlashcardProps = {
     language: string,
-    category: string
+    category: string,
+    word: string
 }
 
 const Flashcard = (props: FlashcardProps) => {
@@ -17,4 +18,5 @@ const Flashcard = (props: FlashcardProps) => {
   )
 }
 
+export type { FlashcardProps };
 export default Flashcard;
