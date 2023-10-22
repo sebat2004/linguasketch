@@ -1,12 +1,21 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import { Link } from 'expo-router'
+import React, { useState } from 'react'
 
 const languges = () => {
+  const [language, setLanguage] = useState('spanish');
+
   return (
     <View>
-      <Text>languges</Text>
+      <Link 
+        href="/categories"
+        onPress={() => setLanguage('spanish')}
+      >
+        Spanish
+      </Link>
     </View>
-  )
-}
+  );
+};
+
 
 export default languges

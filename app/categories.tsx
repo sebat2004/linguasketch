@@ -1,12 +1,21 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import { Link } from 'expo-router'
+import React, { useState } from 'react'
 
 const categories = () => {
+  const [category, setCategory] = useState('sports');
+
   return (
     <View>
-      <Text>Pick a Category!</Text>
+      <Link 
+        href="/flashcard"
+        onPress={() => setCategory('sports')}
+      >
+        Sports
+      </Link>
     </View>
-  )
-}
+  );
+};
 
-export default categories
+
+export default categories;

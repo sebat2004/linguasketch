@@ -10,7 +10,7 @@
         "taxi": {"spanish": "taxi", "french": "taxi", "chinese": "出租车", "german": "Taxi", "korean": "택시"},
         "truck": {"spanish": "camión", "french": "camion", "chinese": "卡车", "german": "Lkw", "korean": "트럭"},
         "scooter": {"spanish": "scooter", "french": "scooter", "chinese": "滑板车", "german": "Roller", "korean": "스쿠터"},
-        "helicopter": {"spanish": "helicoptero", "french": "hélicoptère", "chinese": "直升机", "german": "Hubschrauber", "korean": "헬리콥터"},
+        "helicopter": {"spanish": "helicoptero", "french": "hélicoptère", "chinese": "直升机", "german": "Hubschrauber", "korean": "헬리콥터"}
     },
 
     "clothing": {
