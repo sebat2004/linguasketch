@@ -7,11 +7,50 @@ const languges = () => {
 
   return (
     <View>
-      <Link 
-        href="/categories"
+      <Link
+        href={{
+          pathname: "/categories",
+          params: { language: language }
+        }}
         onPress={() => setLanguage('spanish')}
       >
         Spanish
+      </Link>
+      <Link 
+        href={{
+          pathname: "/categories",
+          params: { language: language }
+        }}
+        onPress={() => setLanguage('french')}
+      >
+        French
+      </Link>
+      <Link 
+        href={{
+          pathname: "/categories",
+          params: { language: language }
+        }}
+        onPress={() => setLanguage('chinese')}
+      >
+        Chinese
+      </Link>
+      <Link 
+        href={{
+          pathname: "/categories",
+          params: { language: language }
+        }}
+        onPress={() => setLanguage('german')}
+      >
+        German
+      </Link>
+      <Link 
+        href={{
+          pathname: "/categories",
+          params: { language: language }
+        }}
+        onPress={() => setLanguage('korean')}
+      >
+        Korean
       </Link>
     </View>
   );
