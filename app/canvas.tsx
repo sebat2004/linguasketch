@@ -47,7 +47,7 @@ const canvas = () => {
   });
 
   const undo = () => {
-    setDeltas(values => values.length > 0 ? values.slice(0, -1) : []);
+    setDeltas(values => values.length > 0 ? values.slice(0, values.length - 1) : []);
   }
  
   return (

@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const categories = () => {
+const CustomHeader = () => {
   return (
     <View>
-      <Text>categories</Text>
+      <Text>CustomHeader</Text>
     </View>
   )
 }
 
-export default categories
+export default CustomHeader
