@@ -54,7 +54,6 @@ const languges = () => {
         >
           Korean
         </Link>
-        <Link href="/canvas" >Canvas</Link>
       </View>
     </Screen>
   );
