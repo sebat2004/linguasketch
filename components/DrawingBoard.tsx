@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Canvas, PaintStyle, useCanvasRef, Fill, Path, useTouchHandler, Skia, SkPath, SkPaint } from "@shopify/react-native-skia";
  
 import { View, Text, Button } from 'react-native'
@@ -29,7 +29,7 @@ const eraserPaint = () => {
   return paint;
 }
 
-const canvas = () => {
+const DrawingBoard = () => {
   const ref = useCanvasRef();
   const [deltas, setDeltas] = useState<Delta[]>([]);
   const cPaint = useRef<SkPaint>(penPaint());
@@ -85,4 +85,4 @@ const canvas = () => {
   );
 }
 
-export default canvas;
+export default DrawingBoard;
