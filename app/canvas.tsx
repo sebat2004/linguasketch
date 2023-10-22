@@ -1,24 +1,65 @@
-import {useEffect} from "react";
-import {Canvas, Image, useCanvasRef, Circle, useValue, useTouchHandler} from "@shopify/react-native-skia";
+import {useEffect, useState, useRef} from "react";
+import {Canvas, Image, PaintStyle, useCanvasRef, Circle, Fill, Path, SkiaMutableValue, useValue, useTouchHandler, Skia, SkPath} from "@shopify/react-native-skia";
  
-import { View, Text } from 'react-native'
+import { View, Text, Button } from 'react-native'
 import React from 'react'
+import { getBackgroundColorAsync } from "expo-system-ui";
+
+const penPaint = () => {
+  const paint = Skia.Paint();
+
+  paint.setStyle(PaintStyle.Stroke);
+  paint.setStrokeWidth(4);
+  paint.setColor(Skia.Color("#000000"));
+
+  return paint;
+}
+
+const eraserPaint = () => {
+  const paint = Skia.Paint();
+
+  paint.setStyle(PaintStyle.Stroke);
+  paint.setStrokeWidth(4);
+  paint.setColor(Skia.Color("#FFFFFF"));
+
+  return paint;
+}
 
 const canvas = () => {
-  const cx = useValue(100);
-  const cy = useValue(100);
- 
+  const ref = useCanvasRef();
+  const [deltas, setDeltas] = useState<SkPath[]>([]);
+  const [erase, setErase] = useState<boolean>(false);
+  const cPath = useRef<SkPath | null>(null);
+  
   const touchHandler = useTouchHandler({
-    onActive: ({ x, y }) => {
-      cx.current = x;
-      cy.current = y;
-    },
+      onStart: ({ x, y }) => {
+        cPath.current = Skia.Path.Make();
+        cPath.current.moveTo(x, y);
+
+        setDeltas(values => values.concat(cPath.current!));
+      },
+      onActive: ({ x, y }) => {
+        cPath.current!.lineTo(x, y);
+      },
+      onEnd: ({ x, y }) => {
+        cPath.current!.lineTo(x, y);
+      },
   });
+
+  const undo = () => {
+    setDeltas(values => values.length > 0 ? values.slice(0, -1) : []);
+  }
  
   return (
-    <Canvas style={{ flex: 1 }} onTouch={touchHandler}>
-      <Circle cx={cx} cy={cy} r={10} color="red" />
-    </Canvas>
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Canvas style={{width: 200, height: 150}} onTouch={touchHandler} ref={ref}>
+        <Fill color="white" />
+        {deltas.map((delta, index) => {
+          return <Path key={index} path={delta} style="stroke" strokeWidth={4} color="#3EB489" />
+        })}
+      </Canvas>
+      <Button onPress={undo} title="Undo" color="#841584" />
+    </View>
   );
 }
 
