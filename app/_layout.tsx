@@ -1,5 +1,4 @@
 import { Stack } from 'expo-router';
-import CustomHeader from '../components/CustomHeader';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -17,7 +16,6 @@ export default function RootLayoutNav() {
       <Stack.Screen name="landing" options={{
         headerShown: false
       }} />
-      <Stack.Screen name="index" options={{}} />
     </Stack>
   );
 }

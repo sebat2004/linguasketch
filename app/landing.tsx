@@ -2,6 +2,7 @@ import { View, Text, Image, StyleSheet } from 'react-native'
 import { Link } from 'expo-router'
 import { LinearGradient } from 'expo-linear-gradient'
 import React from 'react'
+import { Ionicons } from '@expo/vector-icons';
 
 const landing = () => {
     return (
@@ -17,6 +18,8 @@ const landing = () => {
             style={{width: 225, height: 210, marginTop: 130, alignSelf: 'center'}}   
             />
             <Text style={{fontSize: 40, fontWeight: '300', marginTop: 100, alignSelf: 'center'}}>LinguaSketch</Text>
+            <Ionicons/>
+            <Link href="/categories">Go To Index</Link>
           </LinearGradient>
         </>
       );
