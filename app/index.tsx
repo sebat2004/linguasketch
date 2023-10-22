@@ -35,7 +35,7 @@ const landing = () => {
                 color: '#E4CDBC',
               }}
             >
-              Go to languages.
+              Tap to Begin
             </Link>
           </LinearGradient>
         </>
