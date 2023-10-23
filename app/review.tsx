@@ -1,4 +1,4 @@
-import { Button, Text } from 'react-native'
+import { Button, Text, View } from 'react-native'
 import ImageDisplay from '../components/ImageDisplay'
 import { useState, useEffect } from 'react'
 import { useLocalSearchParams, Stack } from 'expo-router'
@@ -37,15 +37,27 @@ const review = () => {
     }  
   }
 
+  const prev = () => {
+    setIndex(prev => prev ? prev - 1 : 0);
+  }
+
+  const next = () => {
+    setIndex(prev => prev + 1 < words.length ? prev + 1 : prev);
+  }
+
   return (
     <>
       <Stack.Screen options={{headerShown: false}} />
       <SafeAreaView>
         <Text>{'Word: ' + words[index]}</Text>
         <ImageDisplay {...{language: language, word: words[index], category: category}}/> 
-        {/* {isFlipped ? <Text>Answer:</Text> : <Flashcard category={category} language={language} word={words[index]} />} */}
+        {/* { isFlipped && <Flashcard category={category} language={language} word={words[index]} /> } */}
         <Button title="Check" onPress={() => setIsFlipped(!isFlipped)} />
       </SafeAreaView>
+      <View style={{flexWrap: 'wrap', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: "100%"}}>
+        <Button onPress={prev} title="Prev" color="#841584" />
+        <Button onPress={next} title="Next" color="#841584" /> 
+      </View>
     </>
   )
 }
