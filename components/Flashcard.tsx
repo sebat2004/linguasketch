@@ -5,7 +5,6 @@ import vocab from '../app/vocab.json';
 type FlashcardProps = {
     language: string,
     category: string,
-    word: string
 }
 
 const Flashcard = (props: FlashcardProps) => {

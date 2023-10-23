@@ -1,9 +1,14 @@
 import { useState, useRef } from "react";
 import { Canvas, PaintStyle, useCanvasRef, Fill, Path, useTouchHandler, Skia, SkPath, SkPaint } from "@shopify/react-native-skia";
-import { FlashcardProps } from './Flashcard';
 import { View, Text, Button } from 'react-native';
 import React from 'react';
 import AsyncStorage from "@react-native-async-storage/async-storage";
+
+type FlashcardProps = {
+  language: string,
+  category: string,
+  word: string
+}
 
 type Delta = {
   path: SkPath;

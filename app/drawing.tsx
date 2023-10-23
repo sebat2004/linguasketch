@@ -4,6 +4,7 @@ import { useState } from 'react'
 import DrawingBoard from '../components/DrawingBoard'
 import { useLocalSearchParams, Stack } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import CustomHeader from '../components/CustomHeader'
 
 const drawing = () => {
   const [isFlipped, setIsFlipped] = useState(false)
@@ -11,7 +12,6 @@ const drawing = () => {
 
   return (
     <>
-      <Stack.Screen options={{headerShown: false}} />
       <SafeAreaView>
         {isFlipped ? <DrawingBoard {...{language: language, word: 'apple', category: category}}/> : <Flashcard category={category} language={language} word={'word'} />}
         <Button title="Flip" onPress={() => setIsFlipped(!isFlipped)} />
