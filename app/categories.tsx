@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { Link, useLocalSearchParams, Stack } from 'expo-router';
 import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -13,6 +13,7 @@ const Categories = () => {
       <CustomHeader language={language} />
       <Stack.Screen options={{headerShown: false}} />
       <SafeAreaView style={{flex: 1, backgroundColor: '#F4EBE4'}}>
+        <Image style={{width: 290, height: 260, marginTop: 10, marginLeft: 105}} source={require('../assets/images/bubble2.png')} />
         <View style={{flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center'}}>
           
           {/* Column 1 */}
@@ -107,7 +108,7 @@ const Categories = () => {
               }}
               style={styles.reviewButton}
             >
-              Wide Button Text
+              Review Your Flashcards
             </Link>
           </View>
 
@@ -118,8 +119,7 @@ const Categories = () => {
 
 const styles = {
   link: { 
-    overflow: 'hidden',
-    fontSize: 22,
+    fontSize: 20,
     marginTop: 20,
     width: 200,
     height: 50,
