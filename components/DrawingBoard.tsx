@@ -93,9 +93,11 @@ const DrawingBoard = (props: FlashcardProps) => {
 
     const list = await AsyncStorage.getItem(props.language);
 
-    await AsyncStorage.setItem(props.language, list ? list + ';' + props.eWord : props.eWord);
+    if(!list?.split(';').find((value) => value === props.eWord)){
+      await AsyncStorage.setItem(props.language, list ? list + ';' + props.eWord : props.eWord);
 
-    console.log(await AsyncStorage.getItem(props.language));
+      console.log(await AsyncStorage.getItem(props.language));
+    }
   }
 
   const pull = async () => {

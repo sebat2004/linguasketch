@@ -9,6 +9,7 @@ import vocab from './vocab.json'
 
 const drawing = () => {
   const [isFlipped, setIsFlipped] = useState(false)
+  const [refresh, setRefresh] = useState(false);
   const [word, setWord] = useState('')
   const [eWord, setEWord] = useState('')
   const { language, category }: any = useLocalSearchParams()
@@ -31,7 +32,7 @@ const drawing = () => {
     const [word, eWord] = getRandomWord(category, language);
     setWord(word);
     setEWord(eWord);
-  }, [category, language])
+  }, [category, language, refresh])
 
   return (
     <>
@@ -42,6 +43,7 @@ const drawing = () => {
         {isFlipped ? <DrawingBoard {...{language: language, word: word, category: category, eWord: eWord}}/> : <Flashcard category={category} language={language} word={word} eWord={eWord} />}
       </View>
       <Button title="Flip" onPress={() => setIsFlipped(!isFlipped)} />
+      <Button title="Next Word" onPress={() => setRefresh(!refresh)} />
       </SafeAreaView>
     </>
   )
