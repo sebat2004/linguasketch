@@ -7,7 +7,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 type FlashcardProps = {
   language: string,
   category: string,
-  word: string
+  word: string,
+  eWord: string
 }
 
 type Delta = {
@@ -88,15 +89,15 @@ const DrawingBoard = (props: FlashcardProps) => {
       });
     });
     
-    await AsyncStorage.setItem(props.word, JSON.stringify(pData));
+    await AsyncStorage.setItem(props.eWord, JSON.stringify(pData));
 
     const list = await AsyncStorage.getItem(props.category);
 
-    await AsyncStorage.setItem(props.language, list ? list + ';' + props.word : props.word);
+    await AsyncStorage.setItem(props.language, list ? list + ';' + props.eWord : props.eWord);
   }
 
   const pull = async () => {
-    const rIRead = await AsyncStorage.getItem(props.word);
+    const rIRead = await AsyncStorage.getItem(props.eWord);
 
     if(rIRead){
       const uPArr: string[] = JSON.parse(rIRead);
