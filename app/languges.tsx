@@ -2,7 +2,6 @@ import { View, Text } from 'react-native'
 import { Link, Stack } from 'expo-router'
 import React, { useState } from 'react'
 import { Image } from 'react-native'
-import { Screen } from 'expo-router/build/views/Screen'
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const languges = () => {
