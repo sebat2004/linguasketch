@@ -1,50 +1,50 @@
 {
     "transportation": {
-        "english": ["car", "bus", "bicycle", "train", "airplane", "boat", "subway", "taxi", "truck", "scooter", "helicopter"],
-        "spanish": ["coche", "autobús", "bicicleta", "tren", "avión", "bote", "metro", "taxi", "camión", "scooter", "helicoptero"],
-        "french": ["voiture", "bus", "vélo", "train", "avion", "bateau", "métro", "taxi", "camion", "scooter", "hélicoptère"],
-        "chinese": ["汽车", "公交车", "自行车", "火车", "飞机", "船", "地铁", "出租车", "卡车", "滑板车", "直升机"],
-        "german": ["Auto", "Bus", "Fahrrad", "Zug", "Flugzeug", "Boot", "U-Bahn", "Taxi", "Lkw", "Roller", "Hubschrauber"],
-        "korean": ["자동차", "버스", "자전거", "기차", "비행기", "보트", "지하철", "택시", "트럭", "스쿠터", "헬리콥터"]
+        "English": ["car", "bus", "bicycle", "train", "airplane", "boat", "subway", "taxi", "truck", "scooter", "helicopter"],
+        "Spanish": ["coche", "autobús", "bicicleta", "tren", "avión", "bote", "metro", "taxi", "camión", "scooter", "helicoptero"],
+        "French": ["voiture", "bus", "vélo", "train", "avion", "bateau", "métro", "taxi", "camion", "scooter", "hélicoptère"],
+        "Chinese": ["汽车", "公交车", "自行车", "火车", "飞机", "船", "地铁", "出租车", "卡车", "滑板车", "直升机"],
+        "German": ["Auto", "Bus", "Fahrrad", "Zug", "Flugzeug", "Boot", "U-Bahn", "Taxi", "Lkw", "Roller", "Hubschrauber"],
+        "Korean": ["자동차", "버스", "자전거", "기차", "비행기", "보트", "지하철", "택시", "트럭", "스쿠터", "헬리콥터"]
     },
     "clothing": {
-        "english": ["shirt", "pants", "dress", "shoes", "hat", "jacket", "sweater", "socks", "scarf", "gloves"],
-        "spanish": ["camisa", "pantalones", "vestido", "zapatos", "sombrero", "chaqueta", "suéter", "calcetines", "bufanda", "guantes"],
-        "french": ["chemise", "pantalon", "robe", "chaussures", "chapeau", "veste", "pull", "chaussettes", "écharpe", "gants"],
-        "chinese": ["衬衫", "裤子", "裙子", "鞋", "帽子", "夹克", "毛衣", "袜子", "围巾", "手套"],
-        "german": ["Hemd", "Hose", "Kleid", "Schuhe", "Hut", "Jacke", "Pullover", "Socken", "Schal", "Handschuhe"],
-        "korean": ["셔츠", "바지", "드레스", "신발", "모자", "자켓", "스웨터", "양말", "스카프", "장갑"]
+        "English": ["shirt", "pants", "dress", "shoes", "hat", "jacket", "sweater", "socks", "scarf", "gloves"],
+        "Spanish": ["camisa", "pantalones", "vestido", "zapatos", "sombrero", "chaqueta", "suéter", "calcetines", "bufanda", "guantes"],
+        "French": ["chemise", "pantalon", "robe", "chaussures", "chapeau", "veste", "pull", "chaussettes", "écharpe", "gants"],
+        "Chinese": ["衬衫", "裤子", "裙子", "鞋", "帽子", "夹克", "毛衣", "袜子", "围巾", "手套"],
+        "German": ["Hemd", "Hose", "Kleid", "Schuhe", "Hut", "Jacke", "Pullover", "Socken", "Schal", "Handschuhe"],
+        "Korean": ["셔츠", "바지", "드레스", "신발", "모자", "자켓", "스웨터", "양말", "스카프", "장갑"]
     },
     "colors": {
-        "english": ["red", "blue", "yellow", "green", "black", "white", "purple", "orange", "pink", "brown"],
-        "spanish": ["rojo", "azul", "amarillo", "verde", "negro", "blanco", "morado", "naranja", "rosa", "marrón"],
-        "french": ["rouge", "bleu", "jaune", "vert", "noir", "blanc", "violet", "orange", "rose", "marron"],
-        "chinese": ["红色", "蓝色", "黄色", "绿色", "黑色", "白色", "紫色", "橙色", "粉红色", "棕色"],
-        "german": ["rot", "blau", "gelb", "grün", "schwarz", "weiß", "lila", "orange", "rosa", "braun"],
-        "korean": ["빨간색", "파란색", "노란색", "초록색", "검은색", "하얀색", "보라색", "주황색", "분홍색", "갈색"]
+        "English": ["red", "blue", "yellow", "green", "black", "white", "purple", "orange", "pink", "brown"],
+        "Spanish": ["rojo", "azul", "amarillo", "verde", "negro", "blanco", "morado", "naranja", "rosa", "marrón"],
+        "French": ["rouge", "bleu", "jaune", "vert", "noir", "blanc", "violet", "orange", "rose", "marron"],
+        "Chinese": ["红色", "蓝色", "黄色", "绿色", "黑色", "白色", "紫色", "橙色", "粉红色", "棕色"],
+        "German": ["rot", "blau", "gelb", "grün", "schwarz", "weiß", "lila", "orange", "rosa", "braun"],
+        "Korean": ["빨간색", "파란색", "노란색", "초록색", "검은색", "하얀색", "보라색", "주황색", "분홍색", "갈색"]
     },
     "food": {
-        "english": ["apple", "bread", "chicken", "rice", "milk", "eggs", "cheese", "fish", "beef", "pasta"],
-        "spanish": ["manzana", "pan", "pollo", "arroz", "leche", "huevos", "queso", "pescado", "carne de res", "pasta"],
-        "french": ["pomme", "pain", "poulet", "riz", "lait", "œufs", "fromage", "poisson", "bœuf", "pâtes"],
-        "chinese": ["苹果", "面包", "鸡", "米饭", "牛奶", "鸡蛋", "奶酪", "鱼", "牛肉", "面条"],
-        "german": ["Apfel", "Brot", "Huhn", "Reis", "Milch", "Eier", "Käse", "Fisch", "Rindfleisch", "Nudeln"],
-        "korean": ["사과", "빵", "닭고기", "밥", "우유", "계란", "치즈", "생선", "소고기", "파스타"]
+        "English": ["apple", "bread", "chicken", "rice", "milk", "eggs", "cheese", "fish", "beef", "pasta"],
+        "Spanish": ["manzana", "pan", "pollo", "arroz", "leche", "huevos", "queso", "pescado", "carne de res", "pasta"],
+        "French": ["pomme", "pain", "poulet", "riz", "lait", "œufs", "fromage", "poisson", "bœuf", "pâtes"],
+        "Chinese": ["苹果", "面包", "鸡", "米饭", "牛奶", "鸡蛋", "奶酪", "鱼", "牛肉", "面条"],
+        "German": ["Apfel", "Brot", "Huhn", "Reis", "Milch", "Eier", "Käse", "Fisch", "Rindfleisch", "Nudeln"],
+        "Korean": ["사과", "빵", "닭고기", "밥", "우유", "계란", "치즈", "생선", "소고기", "파스타"]
     },
     "occupations": {
-        "english": ["teacher", "doctor", "engineer", "nurse", "lawyer", "chef", "pilot", "farmer", "musician", "artist"],
-        "spanish": ["profesor", "médico", "ingeniero", "enfermera", "abogado", "chef", "piloto", "granjero", "músico", "artista"],
-        "french": ["enseignant", "médecin", "ingénieur", "infirmière", "avocat", "chef", "pilote", "agriculteur", "musicien", "artiste"],
-        "chinese": ["老师", "医生", "工程师", "护士", "律师", "厨师", "飞行员", "农民", "音乐家", "艺术家"],
-        "german": ["Lehrer", "Arzt", "Ingenieur", "Krankenschwester", "Anwalt", "Koch", "Pilot", "Bauer", "Musiker", "Künstler"],
-        "korean": ["교사", "의사", "기술자", "간호사", "변호사", "요리사", "파일럿", "농부", "음악가", "예술가"]
+        "English": ["teacher", "doctor", "engineer", "nurse", "lawyer", "chef", "pilot", "farmer", "musician", "artist"],
+        "Spanish": ["profesor", "médico", "ingeniero", "enfermera", "abogado", "chef", "piloto", "granjero", "músico", "artista"],
+        "French": ["enseignant", "médecin", "ingénieur", "infirmière", "avocat", "chef", "pilote", "agriculteur", "musicien", "artiste"],
+        "Chinese": ["老师", "医生", "工程师", "护士", "律师", "厨师", "飞行员", "农民", "音乐家", "艺术家"],
+        "German": ["Lehrer", "Arzt", "Ingenieur", "Krankenschwester", "Anwalt", "Koch", "Pilot", "Bauer", "Musiker", "Künstler"],
+        "Korean": ["교사", "의사", "기술자", "간호사", "변호사", "요리사", "파일럿", "농부", "음악가", "예술가"]
     },    
     "sports": {
-        "english": ["soccer", "basketball", "tennis", "baseball", "volleyball", "golf", "swimming", "boxing", "hockey", "badminton"],
-        "spanish": ["fútbol", "baloncesto", "tenis", "béisbol", "voleibol", "golf", "natación", "boxeo", "hockey", "bádminton"],
-        "french": ["football", "basket-ball", "tennis", "base-ball", "volley-ball", "golf", "natation", "boxe", "hockey", "badminton"],
-        "chinese": ["足球", "篮球", "网球", "棒球", "排球", "高尔夫", "游泳", "拳击", "曲棍球", "羽毛球"],
-        "german": ["Fußball", "Basketball", "Tennis", "Baseball", "Volleyball", "Golf", "Schwimmen", "Boxen", "Hockey", "Badminton"],
-        "korean": ["축구", "농구", "테니스", "야구", "배구", "골프", "수영", "복싱", "하키", "배드민턴"]
+        "English": ["soccer", "basketball", "tennis", "baseball", "volleyball", "golf", "swimming", "boxing", "hockey", "badminton"],
+        "Spanish": ["fútbol", "baloncesto", "tenis", "béisbol", "voleibol", "golf", "natación", "boxeo", "hockey", "bádminton"],
+        "French": ["football", "basket-ball", "tennis", "base-ball", "volley-ball", "golf", "natation", "boxe", "hockey", "badminton"],
+        "Chinese": ["足球", "篮球", "网球", "棒球", "排球", "高尔夫", "游泳", "拳击", "曲棍球", "羽毛球"],
+        "German": ["Fußball", "Basketball", "Tennis", "Baseball", "Volleyball", "Golf", "Schwimmen", "Boxen", "Hockey", "Badminton"],
+        "Korean": ["축구", "농구", "테니스", "야구", "배구", "골프", "수영", "복싱", "하키", "배드민턴"]
     }
 }

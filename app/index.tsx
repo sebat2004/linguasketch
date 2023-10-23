@@ -21,8 +21,9 @@ const landing = () => {
             <Ionicons/>
             <Link href="/languges" 
               style={{
+                overflow: 'hidden',
                 alignSelf: 'center', 
-                marginTop: 100, 
+                marginTop: 40, 
                 width: 200, 
                 height: 40, 
                 backgroundColor: "#695648", 

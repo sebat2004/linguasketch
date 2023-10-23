@@ -3,11 +3,21 @@ import React from 'react'
 
 const CustomHeader = (props) => {
   const language = props.language
-  return (
-    <View style={{width: "100%", height: 50, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>{language}</Text>
+  const category = props.category
+
+  if (category === undefined) {
+    return (
+      <View style={{width: "100%", height: 75, alignItems: 'center', justifyContent: 'center', backgroundColor: "#F4EBE4"}}>
+        <Text style={{fontSize: 20}}>{language}</Text>
+      </View>
+    )
+  } else {
+    return (
+    <View style={{width: "100%", height: 75, alignItems: 'center', justifyContent: 'center', backgroundColor: "#F4EBE4"}}>
+        <Text style={{fontSize: 20}}>{category}</Text>
     </View>
-  )
+    )
+  }
 }
 
 export default CustomHeader

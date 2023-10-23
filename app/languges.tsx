@@ -11,55 +11,55 @@ const Languages = () => {
     <>
       <Stack.Screen options={{headerShown: false}} />
       <SafeAreaView style={{flex: 1, backgroundColor: '#F4EBE4'}}>
-        <Image style={{width: 330, height: 300, marginTop: 30, marginLeft: 80}} source={require('../assets/images/bubble1.png')} />
+        <Image style={{width: 280, height: 250, marginTop: 30, marginLeft: 50}} source={require('../assets/images/bubble1.png')} />
         <View style={{flex: 4, marginHorizontal: "auto", width: "100%", alignItems: 'center', marginTop: -10}}>
           <Link
             href={{
               pathname: "/categories",
-              params: { language: 'spanish' }
+              params: { language: 'Spanish' }
             }}
             style={styles.flag}
-            onPress={() => setLanguage('spanish')}
+            onPress={() => setLanguage('Spanish')}
           >
             Spanish
           </Link>
           <Link 
             href={{
               pathname: "/categories",
-              params: { language: 'french' }
+              params: { language: 'French' }
             }}
             style={styles.flag}
-            onPress={() => setLanguage('french')}
+            onPress={() => setLanguage('French')}
           >
             French
           </Link>
           <Link 
             href={{
               pathname: "/categories",
-              params: { language: 'chinese' }
+              params: { language: 'Chinese' }
             }}
             style={styles.flag}
-            onPress={() => setLanguage('chinese')}
+            onPress={() => setLanguage('Chinese')}
           >
             Chinese
           </Link>
           <Link 
             href={{
               pathname: "/categories",
-              params: { language: 'german' }
+              params: { language: 'German' }
             }}
             style={styles.flag}
-            onPress={() => setLanguage('german')}
+            onPress={() => setLanguage('German')}
           >
             German
           </Link>
           <Link 
             href={{
               pathname: "/categories",
-              params: { language: 'korean' }
+              params: { language: 'Korean' }
             }}
             style={{...styles.flag, marginTop: 20}}
-            onPress={() => setLanguage('korean')}
+            onPress={() => setLanguage('Korean')}
           >
             Korean
           </Link>
@@ -71,7 +71,8 @@ const Languages = () => {
 
 const styles = {
   flag: { 
-    fontSize: 30,
+    overflow: 'hidden',
+    fontSize: 25,
     marginTop: 20,
     width: 300, 
     height: 50,

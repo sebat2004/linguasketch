@@ -13,7 +13,7 @@ const Categories = () => {
       <CustomHeader language={language} />
       <Stack.Screen options={{headerShown: false}} />
       <SafeAreaView style={{flex: 1, backgroundColor: '#F4EBE4'}}>
-        <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center'}}>
+        <View style={{flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center'}}>
           
           {/* Column 1 */}
           <View>
@@ -102,7 +102,8 @@ const Categories = () => {
 
 const styles = {
   link: { 
-    fontSize: 30,
+    overflow: 'hidden',
+    fontSize: 22,
     marginTop: 20,
     width: 150,
     height: 50,

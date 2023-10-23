@@ -12,6 +12,8 @@ const drawing = () => {
 
   return (
     <>
+      <CustomHeader language={language} category={category} />
+      <Stack.Screen options={{headerShown: false}} />
       <SafeAreaView>
         {isFlipped ? <DrawingBoard {...{language: language, word: 'apple', category: category}}/> : <Flashcard category={category} language={language} word={'word'} />}
         <Button title="Flip" onPress={() => setIsFlipped(!isFlipped)} />
