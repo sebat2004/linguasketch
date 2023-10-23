@@ -4,7 +4,6 @@ import { useState } from 'react'
 import DrawingBoard from '../components/DrawingBoard'
 import { useLocalSearchParams, Stack } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import CustomHeader from '../components/CustomHeader'
 
 const drawing = () => {
   const [isFlipped, setIsFlipped] = useState(false)

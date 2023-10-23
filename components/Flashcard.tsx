@@ -3,8 +3,9 @@ import React from 'react';
 import vocab from '../app/vocab.json';
 
 type FlashcardProps = {
-    language: string,
-    category: string,
+    language: string;
+    category: string;
+    word: string;
 }
 
 const Flashcard = (props: FlashcardProps) => {

@@ -134,7 +134,7 @@ const DrawingBoard = (props: FlashcardProps) => {
         <Button onPress={setPen} title="Draw" color="#841584" />
         <Button onPress={setEraser} title="Erase" color="#841584" />
         <Button onPress={save} title="Save" color="#841584" />
-        {/* <Button onPress={pull} title="Pull" color="#841584" /> */}
+        <Button onPress={pull} title="Use Stored" color="#841584" />
       </View>   
     </View>
   );
