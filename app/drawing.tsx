@@ -1,4 +1,4 @@
-import { Button } from 'react-native'
+import { Button, View } from 'react-native'
 import Flashcard from '../components/Flashcard'
 import { useEffect, useState } from 'react'
 import DrawingBoard from '../components/DrawingBoard'
@@ -38,7 +38,9 @@ const drawing = () => {
     <SafeAreaView style={{flex: 1, backgroundColor: '#F4EBE4'}}>
       <CustomHeader language={language} category={category} />
       <Stack.Screen options={{headerShown: false}} />
-      {isFlipped ? <DrawingBoard {...{language: language, word: word, category: category, eWord: eWord}}/> : <Flashcard category={category} language={language} word={word} eWord={eWord} />}
+      <View style={{alignItems: 'center', backgroundColor: 'lightblue', height: 400, justifyContent: 'center'}}>
+        {isFlipped ? <DrawingBoard {...{language: language, word: word, category: category, eWord: eWord}}/> : <Flashcard category={category} language={language} word={word} eWord={eWord} />}
+      </View>
       <Button title="Flip" onPress={() => setIsFlipped(!isFlipped)} />
       </SafeAreaView>
     </>
