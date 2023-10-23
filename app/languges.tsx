@@ -2,11 +2,16 @@ import { View, Text } from 'react-native';
 import { Link, Stack } from 'expo-router';
 import React, { useState } from 'react';
 import { Image } from 'react-native';
-import { Screen } from 'expo-router/build/views/Screen';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Languages = () => {
   const [language, setLanguage] = useState('spanish');
+
+  const clear = async () => {
+    console.log('Clearing');
+    await AsyncStorage.clear();
+  };
 
   return (
     <>
@@ -63,6 +68,16 @@ const Languages = () => {
             onPress={() => setLanguage('Korean')}
           >
             Korean
+          </Link>
+          <Link 
+            href={{
+              pathname: "/categories",
+              params: { language: 'Korean' }
+            }}
+            style={{...styles.flag, marginTop: 20}}
+            onPress={() => clear()}
+          >
+            Clear Cache
           </Link>
         </View>
       </SafeAreaView>
