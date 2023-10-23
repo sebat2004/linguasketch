@@ -15,7 +15,7 @@ const Flashcard = (props: FlashcardProps) => {
   const getRandomWord = (category: string, language: string) => {
     const categoryData = vocabData[category];
 
-    const englishWords = categoryData['english'];
+    const englishWords = categoryData['English'];
     const languageWords = categoryData[language];
 
     const translations = Object.keys(englishWords);
