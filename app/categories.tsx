@@ -13,7 +13,7 @@ const Categories = () => {
       <CustomHeader language={language} />
       <Stack.Screen options={{headerShown: false}} />
       <SafeAreaView style={{flex: 1, backgroundColor: '#F4EBE4'}}>
-        <Image style={{width: 290, height: 260, marginTop: 10, marginLeft: 105}} source={require('../assets/images/bubble2.png')} />
+        <Image style={{width: 290, height: 260, marginLeft: 40}} source={require('../assets/images/bubble2.png')} />
         <View style={{flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center'}}>
           
           {/* Column 1 */}
@@ -133,7 +133,7 @@ const styles = {
   link: { 
     fontSize: 20,
     marginTop: 20,
-    width: 200,
+    width: 140,
     height: 50,
     color: '#E4CDBC',
     textAlign: "center",
