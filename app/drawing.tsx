@@ -6,6 +6,7 @@ import { useLocalSearchParams, Stack } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import CustomHeader from '../components/CustomHeader'
 import vocab from './vocab.json'
+import { Text } from 'react-native'
 
 const drawing = () => {
   const [isFlipped, setIsFlipped] = useState(false)

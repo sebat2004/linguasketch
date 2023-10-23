@@ -5,6 +5,7 @@ import { useLocalSearchParams, Stack } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import AsyncStorage from "@react-native-async-storage/async-storage"
 import vocab from './vocab.json'
+import CustomHeader from '../components/CustomHeader'
 
 //Shuffle Algo
 const shuffle = (array: string[]) => {
@@ -71,16 +72,20 @@ const review = () => {
   return (
     <>
       <Stack.Screen options={{headerShown: false}} />
-      <SafeAreaView>
-        <Text>{'Word: ' + words[index]}</Text>
+      <CustomHeader language={language} category={category} />
+      <SafeAreaView style={{backgroundColor: '#F4EBE4', alignItems: 'center'}}>
         <ImageDisplay {...{language: language, eWord: words[index], word: words[index], category: category}}/> 
+        <Text style={{fontSize: 25, fontWeight: 600}}>Current Word</Text>
+        <Text style={{fontSize: 20, fontWeight: 400}}>{words[index]}</Text>
+        <View style={{backgroundColor: '#F4EBE4', marginTop: 45}}>
+          {isFlipped && <Text>{answer}</Text>}
+          <Button title="Check" onPress={() => setIsFlipped(!isFlipped)} />
+          <View style={{backgroundColor: '#F4EBE4', flexWrap: 'wrap', display: 'flex', flexDirection: 'row', width: "100%", gap: 50}}>
+            <Button onPress={prev} title="Prev" color="#841584" />
+            <Button onPress={next} title="Next" color="#841584" /> 
+          </View>
+        </View>
       </SafeAreaView>
-      {isFlipped && <Text>{answer}</Text>}
-      <Button title="Check" onPress={() => setIsFlipped(!isFlipped)} />
-      <View style={{flexWrap: 'wrap', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: "100%"}}>
-        <Button onPress={prev} title="Prev" color="#841584" />
-        <Button onPress={next} title="Next" color="#841584" /> 
-      </View>
     </>
   )
 }
