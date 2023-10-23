@@ -35,11 +35,11 @@ const drawing = () => {
 
   return (
     <>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#F4EBE4'}}>
       <CustomHeader language={language} category={category} />
       <Stack.Screen options={{headerShown: false}} />
-      <SafeAreaView>
-        {isFlipped ? <DrawingBoard {...{language: language, word: word, category: category, eWord: eWord}}/> : <Flashcard category={category} language={language} word={word} eWord={eWord} />}
-        <Button title="Flip" onPress={() => setIsFlipped(!isFlipped)} />
+      {isFlipped ? <DrawingBoard {...{language: language, word: word, category: category, eWord: eWord}}/> : <Flashcard category={category} language={language} word={word} eWord={eWord} />}
+      <Button title="Flip" onPress={() => setIsFlipped(!isFlipped)} />
       </SafeAreaView>
     </>
   )
