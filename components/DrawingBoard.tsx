@@ -81,8 +81,6 @@ const DrawingBoard = (props: FlashcardProps) => {
   }
 
   const save = async () => {
-    console.log('Saving... ' + props.word);
-
     const pData: string[] = deltas.map((value) => {
       return JSON.stringify({
         svgStr: value.path.toSVGString(),
@@ -93,9 +91,11 @@ const DrawingBoard = (props: FlashcardProps) => {
     
     await AsyncStorage.setItem(props.eWord, JSON.stringify(pData));
 
-    const list = await AsyncStorage.getItem(props.category);
+    const list = await AsyncStorage.getItem(props.language);
 
     await AsyncStorage.setItem(props.language, list ? list + ';' + props.eWord : props.eWord);
+
+    console.log(await AsyncStorage.getItem(props.language));
   }
 
   const pull = async () => {
@@ -126,6 +126,7 @@ const DrawingBoard = (props: FlashcardProps) => {
  
   return (
     <View style={{justifyContent: 'flex-start', alignItems: 'center', width: '100%'}}>
+      <Text style={{textAlign: 'center'}}>{props.eWord + ' : ' + props.word}</Text>
       <Canvas style={{margin: "5%", width: "90%", height: "50%"}} onTouch={touchHandler} ref={ref}>
         <Fill color="white" />
         {deltas.map((delta, index) => {

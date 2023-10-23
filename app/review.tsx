@@ -28,9 +28,9 @@ const review = () => {
   const fWords = async () => {
     const wString = await AsyncStorage.getItem(language);
 
-    console.log(wString);
-
     if(wString) {
+      console.log(wString);
+      
       setWords(shuffle(wString.split(';')));
     } else {
       setWords([]);
@@ -38,10 +38,12 @@ const review = () => {
   }
 
   const prev = () => {
+    console.log(index);
     setIndex(prev => prev ? prev - 1 : 0);
   }
 
   const next = () => {
+    console.log(index);
     setIndex(prev => prev + 1 < words.length ? prev + 1 : prev);
   }
 
@@ -50,7 +52,7 @@ const review = () => {
       <Stack.Screen options={{headerShown: false}} />
       <SafeAreaView>
         <Text>{'Word: ' + words[index]}</Text>
-        <ImageDisplay {...{language: language, word: words[index], category: category}}/> 
+        <ImageDisplay {...{language: language, eWord: words[index], word: words[index], category: category}}/> 
         {/* { isFlipped && <Flashcard category={category} language={language} word={words[index]} /> } */}
         <Button title="Check" onPress={() => setIsFlipped(!isFlipped)} />
       </SafeAreaView>

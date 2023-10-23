@@ -11,14 +11,14 @@ type Delta = {
   paint: SkPaint;
 };
 
-const DrawingBoard = (props: FlashcardProps) => {
+const ImageDisplay = (props: FlashcardProps) => {
   const [deltas, setDeltas] = useState<Delta[]>([]);
 
-  useEffect(() => { pull(); }, [props.word]);
+  useEffect(() => { pull(); }, [props.eWord]);
 
   const pull = async () => {
-    if(props.word){
-        const rIRead = await AsyncStorage.getItem(props.word);
+    if(props.eWord){
+        const rIRead = await AsyncStorage.getItem(props.eWord);
 
         if(rIRead){
             const uPArr: string[] = JSON.parse(rIRead);
@@ -46,7 +46,7 @@ const DrawingBoard = (props: FlashcardProps) => {
 
   return (
     <View style={{justifyContent: 'flex-start', alignItems: 'center', width: '100%'}}>
-      <Canvas style={{margin: "5%", width: "90%", height: "50%"}}>
+      <Canvas style={{margin: "5%", width: "90%", height: "60%"}}>
         <Fill color="white" />
         {deltas.map((delta, index) => {
           return <Path key={index} path={delta.path} paint={delta.paint} />
@@ -56,4 +56,4 @@ const DrawingBoard = (props: FlashcardProps) => {
   );
 }
 
-export default DrawingBoard;
+export default ImageDisplay;
