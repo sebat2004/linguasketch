@@ -6,7 +6,6 @@ import { Screen } from 'expo-router/build/views/Screen';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Languages = () => {
-const Languages = () => {
   const [language, setLanguage] = useState('spanish');
 
   return (
@@ -98,7 +97,5 @@ const styles = {
     cursor: 'pointer',
   },
 };
-
-export default Languages;
 
 export default Languages;
