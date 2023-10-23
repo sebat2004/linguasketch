@@ -1,7 +1,7 @@
-import { View, Text, Button } from 'react-native'
-import Flashcard from '../components/Flashcard.tsx'
+import { Button } from 'react-native'
+import Flashcard from '../components/Flashcard'
 import { useState } from 'react'
-import DrawingBoard from '../components/DrawingBoard.tsx'
+import DrawingBoard from '../components/DrawingBoard'
 import { useLocalSearchParams, Stack } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
@@ -13,7 +13,7 @@ const drawing = () => {
     <>
       <Stack.Screen options={{headerShown: false}} />
       <SafeAreaView>
-        {isFlipped ? <DrawingBoard /> : <Flashcard category={category} language={language} />}
+        {isFlipped ? <DrawingBoard {...{language: language, word: 'apple', category: category}}/> : <Flashcard category={category} language={language} word={'word'} />}
         <Button title="Flip" onPress={() => setIsFlipped(!isFlipped)} />
       </SafeAreaView>
     </>

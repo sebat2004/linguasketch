@@ -77,6 +77,17 @@ const categories = () => {
         >
           Sports
         </Link>
+        <Link 
+          href={{
+            pathname: "/review",
+            params: {
+              language: language,
+              category: 'sports'
+            }
+          }}
+        >
+          Review
+        </Link>
       </SafeAreaView>
     </>
   );
