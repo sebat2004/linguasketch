@@ -80,6 +80,8 @@ const DrawingBoard = (props: FlashcardProps) => {
   }
 
   const save = async () => {
+    console.log('Saving... ' + props.word);
+
     const pData: string[] = deltas.map((value) => {
       return JSON.stringify({
         svgStr: value.path.toSVGString(),
