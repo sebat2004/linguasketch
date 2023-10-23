@@ -119,6 +119,7 @@ const Categories = () => {
 
 const styles = {
   link: { 
+    overflow: 'hidden',
     fontSize: 20,
     marginTop: 20,
     width: 140,
@@ -132,6 +133,7 @@ const styles = {
     cursor: 'pointer',
   },
   reviewButton: {
+    overflow: 'hidden',
     fontSize: 30,
     width: '100%',
     height: 100,

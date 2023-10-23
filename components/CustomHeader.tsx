@@ -7,13 +7,13 @@ const CustomHeader = (props) => {
 
   if (category === undefined) {
     return (
-      <View style={{width: "100%", height: 75, alignItems: 'center', justifyContent: 'center', backgroundColor: "#F4EBE4"}}>
+      <View style={{width: "100%", height: 50, alignItems: 'center', justifyContent: 'flex-end', backgroundColor: "#F4EBE4"}}>
         <Text style={{fontSize: 20}}>{language}</Text>
       </View>
     )
   } else {
     return (
-    <View style={{width: "100%", height: 75, alignItems: 'center', justifyContent: 'center', backgroundColor: "#F4EBE4"}}>
+    <View style={{width: "100%", height: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: "#F4EBE4"}}>
         <Text style={{fontSize: 20}}>{category}</Text>
     </View>
     )
