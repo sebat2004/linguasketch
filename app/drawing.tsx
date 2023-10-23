@@ -38,7 +38,7 @@ const drawing = () => {
     <SafeAreaView style={{flex: 1, backgroundColor: '#F4EBE4'}}>
       <CustomHeader language={language} category={category} />
       <Stack.Screen options={{headerShown: false}} />
-      <View style={{alignItems: 'center', backgroundColor: 'lightblue', height: 400, justifyContent: 'center'}}>
+      <View style={{alignItems: 'center', height: 400, justifyContent: 'center'}}>
         {isFlipped ? <DrawingBoard {...{language: language, word: word, category: category, eWord: eWord}}/> : <Flashcard category={category} language={language} word={word} eWord={eWord} />}
       </View>
       <Button title="Flip" onPress={() => setIsFlipped(!isFlipped)} />
