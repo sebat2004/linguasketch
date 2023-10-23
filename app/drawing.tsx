@@ -42,8 +42,8 @@ const drawing = () => {
         <View style={{alignItems: 'center', height: 400, justifyContent: 'center'}}>
           {isFlipped ? <DrawingBoard {...{language: language, word: word, category: category, eWord: eWord}}/> : <Flashcard category={category} language={language} word={word} eWord={eWord} />}
         </View>
-        <Button title="Flip" onPress={() => setIsFlipped(!isFlipped)} />
-        <Button title="Next Word" onPress={() => { setIsFlipped(false); setRefresh(!refresh); }} />
+        <Button color="#695648" title="Flip" onPress={() => setIsFlipped(!isFlipped)} />
+        <Button color="#695648" title="Next Word" onPress={() => { setIsFlipped(false); setRefresh(!refresh); }} />
       </SafeAreaView>
     </>
   )

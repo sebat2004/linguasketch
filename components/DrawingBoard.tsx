@@ -136,11 +136,11 @@ const DrawingBoard = (props: FlashcardProps) => {
         })}
       </Canvas>
       <View style={{flexWrap: 'wrap', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: "90%"}}>
-        <Button onPress={undo} title="Undo" color="#841584" />
-        <Button onPress={setPen} title="Draw" color="#841584" />
-        <Button onPress={setEraser} title="Erase" color="#841584" />
-        <Button onPress={save} title="Save" color="#841584" />
-        <Button onPress={pull} title="Use Stored" color="#841584" />
+        <Button onPress={undo} title="Undo" color="#695648" />
+        <Button  onPress={setPen} title="Draw" color="#695648" />
+        <Button onPress={setEraser} title="Erase" color="#695648" />
+        <Button  onPress={save} title="Save" color="#695648" />
+        <Button onPress={pull} title="Use Stored" color="#695648" />
       </View>   
     </View>
   );
