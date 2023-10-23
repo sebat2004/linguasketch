@@ -94,6 +94,18 @@ const Categories = () => {
             >
               Sports
             </Link>
+            <Link 
+              href={{
+                pathname: "/review",
+                params: {
+                  language: language,
+                  category: 'review'
+                }
+              }}
+              style={styles.link}
+            >
+              Review
+            </Link>
           </View>
         </View>
         

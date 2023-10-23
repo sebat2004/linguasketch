@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Canvas, PaintStyle, Fill, Path, Skia, SkPath, SkPaint } from "@shopify/react-native-skia";
 import { View } from 'react-native';
 import React from 'react';
@@ -14,32 +14,36 @@ type Delta = {
 const DrawingBoard = (props: FlashcardProps) => {
   const [deltas, setDeltas] = useState<Delta[]>([]);
 
-  (async () => {
-    const rIRead = await AsyncStorage.getItem(props.word);
+  useEffect(() => { pull(); }, [props.word]);
 
-    if(rIRead){
-      const uPArr: string[] = JSON.parse(rIRead);
-      const nDeltas: Delta[] = uPArr.map((value) => {
-        const rawDelta: RawDelta = JSON.parse(value);
-        const rawPaint: SkPaint = Skia.Paint();
-        const rawColor: number[] = rawDelta.color.split(',').map((value) => parseFloat(value));
+  const pull = async () => {
+    if(props.word){
+        const rIRead = await AsyncStorage.getItem(props.word);
 
-        rawPaint.setStyle(PaintStyle.Stroke);
-        rawPaint.setStrokeWidth(rawDelta.width);        
-        rawPaint.setColor(new Float32Array(rawColor));
+        if(rIRead){
+            const uPArr: string[] = JSON.parse(rIRead);
+            const nDeltas: Delta[] = uPArr.map((value) => {
+                const rawDelta: RawDelta = JSON.parse(value);
+                const rawPaint: SkPaint = Skia.Paint();
+                const rawColor: number[] = rawDelta.color.split(',').map((value) => parseFloat(value));
 
-        const fDelta: Delta = {
-          path: Skia.Path.MakeFromSVGString(rawDelta.svgStr)!,
-          paint: rawPaint
-        };
+                rawPaint.setStyle(PaintStyle.Stroke);
+                rawPaint.setStrokeWidth(rawDelta.width);        
+                rawPaint.setColor(new Float32Array(rawColor));
 
-        return fDelta;
-      });
+                const fDelta: Delta = {
+                path: Skia.Path.MakeFromSVGString(rawDelta.svgStr)!,
+                paint: rawPaint
+                };
 
-      setDeltas(nDeltas);
+                return fDelta;
+            });
+
+            setDeltas(nDeltas);
+        }
     }
-  })();
- 
+  }
+
   return (
     <View style={{justifyContent: 'flex-start', alignItems: 'center', width: '100%'}}>
       <Canvas style={{margin: "5%", width: "90%", height: "50%"}}>
