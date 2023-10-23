@@ -129,7 +129,7 @@ const DrawingBoard = (props: FlashcardProps) => {
   return (
     <View style={{justifyContent: 'flex-start', alignItems: 'center', width: '100%'}}>
       <Text style={{textAlign: 'center'}}>{props.eWord + ' : ' + props.word}</Text>
-      <Canvas style={{margin: "5%", width: "90%", height: "50%"}} onTouch={touchHandler} ref={ref}>
+      <Canvas style={{margin: "5%", width: "90%", height: "75%"}} onTouch={touchHandler} ref={ref}>
         <Fill color="white" />
         {deltas.map((delta, index) => {
           return <Path key={index} path={delta.path} paint={delta.paint} />

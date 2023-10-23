@@ -46,7 +46,7 @@ const ImageDisplay = (props: FlashcardProps) => {
 
   return (
     <View style={{justifyContent: 'flex-start', alignItems: 'center', width: '100%'}}>
-      <Canvas style={{margin: "5%", width: "90%", height: "60%"}}>
+      <Canvas style={{margin: "5%", width: "90%", height: "75%"}}>
         <Fill color="white" />
         {deltas.map((delta, index) => {
           return <Path key={index} path={delta.path} paint={delta.paint} />
