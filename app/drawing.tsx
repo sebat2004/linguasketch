@@ -1,4 +1,4 @@
-import { View, Text, Button } from 'react-native'
+import { Button } from 'react-native'
 import Flashcard from '../components/Flashcard'
 import { useState } from 'react'
 import DrawingBoard from '../components/DrawingBoard'
@@ -13,11 +13,7 @@ const drawing = () => {
   return (
     <>
       <SafeAreaView>
-        <CustomHeader />
-        <Stack.Screen options={{headerShown: false}} />
-        <View style={{marginTop: 50}}>
-        <DrawingBoard {...{language: 'spanish', word: 'apple', category: 'etc'}}/>
-        </View>
+        {isFlipped ? <DrawingBoard {...{language: language, word: 'apple', category: category}}/> : <Flashcard category={category} language={language} word={'word'} />}
         <Button title="Flip" onPress={() => setIsFlipped(!isFlipped)} />
       </SafeAreaView>
     </>

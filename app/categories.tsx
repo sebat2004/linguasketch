@@ -2,13 +2,15 @@ import { View, Text } from 'react-native'
 import { Link, useLocalSearchParams, Stack } from 'expo-router'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import CustomHeader from '../components/CustomHeader'
 
 const categories = () => {
   const params: any = useLocalSearchParams() 
-  const [language, setLanguage] = useState(params.language)
+  const [language, setLanguage] = useState<any>(params.language)
 
   return (
     <>
+      <CustomHeader language={language}/>
       <Stack.Screen options={{headerShown: false}} />
       <SafeAreaView>
         <Link 
@@ -76,6 +78,17 @@ const categories = () => {
           }}
         >
           Sports
+        </Link>
+        <Link 
+          href={{
+            pathname: "/review",
+            params: {
+              language: language,
+              category: 'sports'
+            }
+          }}
+        >
+          Review
         </Link>
       </SafeAreaView>
     </>

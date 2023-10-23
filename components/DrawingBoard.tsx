@@ -92,7 +92,7 @@ const DrawingBoard = (props: FlashcardProps) => {
 
     const list = await AsyncStorage.getItem(props.category);
 
-    await AsyncStorage.setItem(props.category, list ? list + ';' + props.word : props.word);
+    await AsyncStorage.setItem(props.language, list ? list + ';' + props.word : props.word);
   }
 
   const pull = async () => {
@@ -122,23 +122,23 @@ const DrawingBoard = (props: FlashcardProps) => {
   }
  
   return (
-    <View style={{justifyContent: 'center', alignItems: 'center'}}>
-      <Canvas style={{width: 300, height: 250}} onTouch={touchHandler} ref={ref}>
+    <View style={{justifyContent: 'flex-start', alignItems: 'center', width: '100%'}}>
+      <Canvas style={{margin: "5%", width: "90%", height: "50%"}} onTouch={touchHandler} ref={ref}>
         <Fill color="white" />
         {deltas.map((delta, index) => {
           return <Path key={index} path={delta.path} paint={delta.paint} />
         })}
       </Canvas>
-      <View style={{}}>
-        <Text>{"Erase: " + cPaint.current.getColor()}</Text>
+      <View style={{flexWrap: 'wrap', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: "90%"}}>
         <Button onPress={undo} title="Undo" color="#841584" />
         <Button onPress={setPen} title="Draw" color="#841584" />
         <Button onPress={setEraser} title="Erase" color="#841584" />
         <Button onPress={save} title="Save" color="#841584" />
-        <Button onPress={pull} title="Pull" color="#841584" />
+        {/* <Button onPress={pull} title="Pull" color="#841584" /> */}
       </View>   
     </View>
   );
 }
 
+export type { RawDelta };
 export default DrawingBoard;
