@@ -19,7 +19,24 @@ const landing = () => {
             />
             <Text style={{fontSize: 40, fontWeight: '300', marginTop: 100, alignSelf: 'center'}}>LinguaSketch</Text>
             <Ionicons/>
-            <Link href="/languges" style={{alignSelf: 'center', marginTop: 50}}>Go to languages.</Link>
+            <Link href="/languges" 
+              style={{
+                alignSelf: 'center', 
+                marginTop: 100, 
+                width: 200, 
+                height: 40, 
+                backgroundColor: "#695648", 
+                textAlign: "center", 
+                fontSize: 20,
+                lineHeight: 40,
+                borderRadius: 10,
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                cursor: 'pointer',
+                color: '#E4CDBC',
+              }}
+            >
+              Tap to Begin
+            </Link>
           </LinearGradient>
         </>
       );
