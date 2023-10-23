@@ -1,9 +1,14 @@
 import { useState, useRef } from "react";
 import { Canvas, PaintStyle, useCanvasRef, Fill, Path, useTouchHandler, Skia, SkPath, SkPaint } from "@shopify/react-native-skia";
-import { FlashcardProps } from './Flashcard';
 import { View, Text, Button } from 'react-native';
 import React from 'react';
 import AsyncStorage from "@react-native-async-storage/async-storage";
+
+type FlashcardProps = {
+  language: string,
+  category: string,
+  word: string
+}
 
 type Delta = {
   path: SkPath;
@@ -117,8 +122,8 @@ const DrawingBoard = (props: FlashcardProps) => {
   }
  
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Canvas style={{width: 200, height: 150}} onTouch={touchHandler} ref={ref}>
+    <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      <Canvas style={{width: 300, height: 250}} onTouch={touchHandler} ref={ref}>
         <Fill color="white" />
         {deltas.map((delta, index) => {
           return <Path key={index} path={delta.path} paint={delta.paint} />
