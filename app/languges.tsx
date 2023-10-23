@@ -1,9 +1,11 @@
-import { View } from 'react-native'
-import { Link, Stack } from 'expo-router'
-import React, { useState } from 'react'
-import { Image } from 'react-native'
+import { View, Text } from 'react-native';
+import { Link, Stack } from 'expo-router';
+import React, { useState } from 'react';
+import { Image } from 'react-native';
+import { Screen } from 'expo-router/build/views/Screen';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+const Languages = () => {
 const Languages = () => {
   const [language, setLanguage] = useState('spanish');
 
@@ -75,7 +77,14 @@ const styles = {
     fontSize: 25,
     marginTop: 20,
     width: 300, 
+    fontSize: 30,
+    marginTop: 20,
+    width: 300, 
     height: 50,
+    color: '#E4CDBC',
+    textAlign: "center",
+    lineHeight: 50,
+    backgroundColor: '#695648',
     color: '#E4CDBC',
     textAlign: "center",
     lineHeight: 50,
@@ -84,7 +93,12 @@ const styles = {
     borderRadius: 10,
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
     cursor: 'pointer',
+    borderRadius: 10,
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    cursor: 'pointer',
   },
 };
+
+export default Languages;
 
 export default Languages;
