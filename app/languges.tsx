@@ -69,7 +69,7 @@ const Languages = () => {
           >
             Korean
           </Link>
-          <Link 
+          {/* <Link 
             href={{
               pathname: "/categories",
               params: { language: 'Korean' }
@@ -78,7 +78,7 @@ const Languages = () => {
             onPress={() => clear()}
           >
             Clear Cache
-          </Link>
+          </Link> */}
         </View>
       </SafeAreaView>
     </>

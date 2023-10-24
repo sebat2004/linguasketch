@@ -33,7 +33,7 @@
     },
     "occupations": {
         "English": ["teacher", "doctor", "engineer", "nurse", "lawyer", "chef", "pilot", "farmer", "musician", "artist"],
-        "Spanish": ["profesor", "médico", "ingeniero", "enfermera", "abogado", "chef", "piloto", "granjero", "músico", "artista"],
+        "Spanish": ["profesor", "médico", "ingeniero", "enfermera", "abogado", "cocinero", "piloto", "granjero", "músico", "artista"],
         "French": ["enseignant", "médecin", "ingénieur", "infirmière", "avocat", "chef", "pilote", "agriculteur", "musicien", "artiste"],
         "Chinese": ["老师", "医生", "工程师", "护士", "律师", "厨师", "飞行员", "农民", "音乐家", "艺术家"],
         "German": ["Lehrer", "Arzt", "Ingenieur", "Krankenschwester", "Anwalt", "Koch", "Pilot", "Bauer", "Musiker", "Künstler"],

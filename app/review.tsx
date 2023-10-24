@@ -75,14 +75,16 @@ const review = () => {
       <CustomHeader language={language} category={category} />
       <SafeAreaView style={{backgroundColor: '#F4EBE4', alignItems: 'center'}}>
         <ImageDisplay {...{language: language, eWord: words[index], word: words[index], category: category}}/> 
-        <Text style={{fontSize: 25, fontWeight: 600}}>Current Word</Text>
-        <Text style={{fontSize: 20, fontWeight: 400}}>{words[index]}</Text>
-        <View style={{backgroundColor: '#F4EBE4', marginTop: 45}}>
-          {isFlipped && <Text>{answer}</Text>}
-          <Button title="Check" onPress={() => setIsFlipped(!isFlipped)} />
-          <View style={{backgroundColor: '#F4EBE4', flexWrap: 'wrap', display: 'flex', flexDirection: 'row', width: "100%", gap: 50}}>
-            <Button onPress={prev} title="Prev" color="#841584" />
-            <Button onPress={next} title="Next" color="#841584" /> 
+        <View style={{paddingTop: 50, alignItems: 'center'}}>
+          <Text style={{fontSize: 25, fontWeight: 600}}>Current Word</Text>
+          <Text style={{fontSize: 20, fontWeight: 400}}>{words[index]}</Text>
+        </View>
+        <View style={{backgroundColor: '#F4EBE4', marginTop: 45, alignItems: 'center'}}>
+          {isFlipped && <Text style={{fontSize: 20, fontWeight: 400}}>{answer}</Text>}
+          <Button color="#695648" title="Check" onPress={() => setIsFlipped(!isFlipped)} />
+          <View style={{backgroundColor: '#F4EBE4', flexWrap: 'wrap', display: 'flex', flexDirection: 'row', width: "100%", gap: 50, paddingBottom: 500}}>
+            <Button onPress={prev} title="Prev" color="#695648" />
+            <Button onPress={next} title="Next" color="#695648" /> 
           </View>
         </View>
       </SafeAreaView>
