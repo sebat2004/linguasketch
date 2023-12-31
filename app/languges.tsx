@@ -17,68 +17,71 @@ const Languages = () => {
     <>
       <Stack.Screen options={{headerShown: false}} />
       <SafeAreaView style={{flex: 1, backgroundColor: '#F4EBE4'}}>
-        <Image style={{width: 280, height: 250, marginTop: 30, marginLeft: 50}} source={require('../assets/images/bubble1.png')} />
-        <View style={{flex: 4, marginHorizontal: "auto", width: "100%", alignItems: 'center', marginTop: -10}}>
-          <Link
-            href={{
-              pathname: "/categories",
-              params: { language: 'Spanish' }
-            }}
-            style={styles.flag}
-            onPress={() => setLanguage('Spanish')}
-          >
-            Spanish
-          </Link>
-          <Link 
-            href={{
-              pathname: "/categories",
-              params: { language: 'French' }
-            }}
-            style={styles.flag}
-            onPress={() => setLanguage('French')}
-          >
-            French
-          </Link>
-          <Link 
-            href={{
-              pathname: "/categories",
-              params: { language: 'Chinese' }
-            }}
-            style={styles.flag}
-            onPress={() => setLanguage('Chinese')}
-          >
-            Chinese
-          </Link>
-          <Link 
-            href={{
-              pathname: "/categories",
-              params: { language: 'German' }
-            }}
-            style={styles.flag}
-            onPress={() => setLanguage('German')}
-          >
-            German
-          </Link>
-          <Link 
-            href={{
-              pathname: "/categories",
-              params: { language: 'Korean' }
-            }}
-            style={{...styles.flag, marginTop: 20}}
-            onPress={() => setLanguage('Korean')}
-          >
-            Korean
-          </Link>
-          {/* <Link 
-            href={{
-              pathname: "/categories",
-              params: { language: 'Korean' }
-            }}
-            style={{...styles.flag, marginTop: 20}}
-            onPress={() => clear()}
-          >
-            Clear Cache
-          </Link> */}
+        <View style={{flex: 1, marginHorizontal: "auto", width: "100%", alignItems: 'center'}}>
+          <Text style={{fontSize: 40, marginTop: 20, marginBottom: 20, color: '#695648', fontWeight: 'bold'}}>Languages</Text>
+          <Image style={{width: 280, height: 250, marginBottom: 20}} source={require('../assets/images/bubble1.png')} />
+          <View style={{flex: 1, marginHorizontal: "auto", width: "100%", alignItems: 'center'}}>
+            <Link
+              href={{
+                pathname: "/categories",
+                params: { language: 'Spanish' }
+              }}
+              style={styles.flag}
+              onPress={() => setLanguage('Spanish')}
+            >
+              Spanish
+            </Link>
+            <Link 
+              href={{
+                pathname: "/categories",
+                params: { language: 'French' }
+              }}
+              style={styles.flag}
+              onPress={() => setLanguage('French')}
+            >
+              French
+            </Link>
+            <Link 
+              href={{
+                pathname: "/categories",
+                params: { language: 'Chinese' }
+              }}
+              style={styles.flag}
+              onPress={() => setLanguage('Chinese')}
+            >
+              Chinese
+            </Link>
+            <Link 
+              href={{
+                pathname: "/categories",
+                params: { language: 'German' }
+              }}
+              style={styles.flag}
+              onPress={() => setLanguage('German')}
+            >
+              German
+            </Link>
+            <Link 
+              href={{
+                pathname: "/categories",
+                params: { language: 'Korean' }
+              }}
+              style={{...styles.flag, marginTop: 20}}
+              onPress={() => setLanguage('Korean')}
+            >
+              Korean
+            </Link>
+            {/* <Link 
+              href={{
+                pathname: "/categories",
+                params: { language: 'Korean' }
+              }}
+              style={{...styles.flag, marginTop: 20}}
+              onPress={() => clear()}
+            >
+              Clear Cache
+            </Link> */}
+          </View>
         </View>
       </SafeAreaView>
     </>
