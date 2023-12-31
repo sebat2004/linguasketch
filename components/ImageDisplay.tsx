@@ -45,7 +45,7 @@ const ImageDisplay = (props: FlashcardProps) => {
   }
 
   return (
-    <View style={{justifyContent: 'flex-start', alignItems: 'center', width: '100%', height: 230}}>
+    <View style={styles.flashcard}>
       <Canvas style={{width: "90%", height: "100%"}}>
         <Fill color="white" />
         {deltas.map((delta, index) => {
@@ -54,6 +54,22 @@ const ImageDisplay = (props: FlashcardProps) => {
       </Canvas>  
     </View>
   );
+}
+
+const styles = {
+  flashcard: {
+    backgroundColor: 'white', 
+    borderRadius: 20, 
+    margin: "5%", 
+    width: "80%", 
+    height: 350, 
+    justifyContent: 'center',
+    alignItems: 'center', 
+    shadowColor: '#171717',
+    shadowOffset: {width: -1, height: 4},
+    shadowOpacity: 0.2,
+    shadowRadius: 3
+  }
 }
 
 export default ImageDisplay;
