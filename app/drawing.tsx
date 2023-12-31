@@ -40,7 +40,12 @@ const drawing = () => {
       <SafeAreaView style={{flex: 1, backgroundColor: '#F4EBE4'}}>
         <CustomHeader language={language} category={category} />
         <Stack.Screen options={{headerShown: false}} />
-        <View style={{alignItems: 'center', justifyContent: 'flex-start', height: 350, marginTop: 80, marginBottom: 80}}>
+        {
+          isFlipped ? <Text style={{textAlign: 'center', marginTop: 80}}>{eWord + ' : ' + word}</Text> 
+          :
+          <Text style={{marginTop: 80}}></Text>
+        }
+        <View style={{alignItems: 'center', justifyContent: 'flex-start', height: 350, marginBottom: 80}}>
           {
             isFlipped ? <DrawingBoard {...{language: language, word: word, category: category, eWord: eWord}}/> 
             : 
