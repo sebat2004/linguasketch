@@ -47,6 +47,7 @@ const landing = () => {
       linearGradient: {
         flex: 1,
         alignContent: 'center',
+        justifyContent: 'center',
       },
       buttonText: {
         fontSize: 18,
