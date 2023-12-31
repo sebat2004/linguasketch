@@ -127,22 +127,23 @@ const DrawingBoard = (props: FlashcardProps) => {
   }
  
   return (
-    <View style={{justifyContent: 'flex-start', alignItems: 'center', width: '100%'}}>
-      <Text style={{textAlign: 'center'}}>{props.eWord + ' : ' + props.word}</Text>
-      <Canvas style={{margin: "5%", width: "90%", height: "60%"}} onTouch={touchHandler} ref={ref}>
-        <Fill color="white" />
-        {deltas.map((delta, index) => {
-          return <Path key={index} path={delta.path} paint={delta.paint} />
-        })}
-      </Canvas>
+    <>
+      <View style={{backgroundColor: 'white', borderRadius: 20, margin: "5%", width: "81%", height: "99%", justifyContent: 'center', alignItems: 'center', shadowColor: '#171717', shadowOffset: {width: -1, height: 4}, shadowOpacity: 0.2, shadowRadius: 3}}>
+        <Canvas style={{margin: "5%", width: "90%", height: "90%"}} onTouch={touchHandler} ref={ref}>
+          <Fill color="white" />
+          {deltas.map((delta, index) => {
+            return <Path key={index} path={delta.path} paint={delta.paint} />
+          })}
+        </Canvas>  
+      </View>
       <View style={{flexWrap: 'wrap', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: "90%"}}>
-        <Button onPress={undo} title="Undo" color="#695648" />
-        <Button  onPress={setPen} title="Draw" color="#695648" />
-        <Button onPress={setEraser} title="Erase" color="#695648" />
-        <Button  onPress={save} title="Save" color="#695648" />
-        <Button onPress={pull} title="Use Stored" color="#695648" />
-      </View>   
-    </View>
+      <Button onPress={undo} title="Undo" color="#695648" />
+      <Button  onPress={setPen} title="Draw" color="#695648" />
+      <Button onPress={setEraser} title="Erase" color="#695648" />
+      <Button  onPress={save} title="Save" color="#695648" />
+      <Button onPress={pull} title="Use Stored" color="#695648" />
+      </View>
+    </> 
   );
 }
 
