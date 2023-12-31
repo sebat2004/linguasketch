@@ -9,7 +9,7 @@ type FlashcardProps = {
     word: string
 }
 
-const Flashcard = (props: FlashcardProps) => {
+const FlashcardVocabSide = (props: FlashcardProps) => {
   const { language, category, eWord, word } = props;
   
   return (
@@ -21,4 +21,4 @@ const Flashcard = (props: FlashcardProps) => {
 };
 
 export type { FlashcardProps };
-export default Flashcard;
+export default FlashcardVocabSide;

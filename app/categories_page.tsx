@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CustomHeader from '../components/CustomHeader';
 
-const Categories = () => {
+const categories_page = () => {
   const params: any = useLocalSearchParams();
   const [language, setLanguage] = useState<any>(params.language);
 
@@ -21,7 +21,7 @@ const Categories = () => {
               
                 <Link 
                   href={{
-                    pathname: "/drawing",
+                    pathname: "/drawing_page",
                     params: {
                       language: language,
                       category: 'transportation'
@@ -33,7 +33,7 @@ const Categories = () => {
                 </Link>
                 <Link 
                   href={{
-                    pathname: "/drawing",
+                    pathname: "/drawing_page",
                     params: {
                       language: language,
                       category: 'colors'
@@ -45,7 +45,7 @@ const Categories = () => {
                 </Link>
                 <Link 
                   href={{
-                    pathname: "/drawing",
+                    pathname: "/drawing_page",
                     params: {
                       language: language,
                       category: 'food'
@@ -57,7 +57,7 @@ const Categories = () => {
                 </Link>
                 <Link 
                   href={{
-                    pathname: "/drawing",
+                    pathname: "/drawing_page",
                     params: {
                       language: language,
                       category: 'clothing'
@@ -69,7 +69,7 @@ const Categories = () => {
                 </Link>
                 <Link 
                   href={{
-                    pathname: "/drawing",
+                    pathname: "/drawing_page",
                     params: {
                       language: language,
                       category: 'occupations'
@@ -81,7 +81,7 @@ const Categories = () => {
                 </Link>
                 <Link 
                   href={{
-                    pathname: "/drawing",
+                    pathname: "/drawing_page",
                     params: {
                       language: language,
                       category: 'sports'
@@ -99,7 +99,7 @@ const Categories = () => {
         <View style={{width: '100%', alignItems: 'center'}}>
             <Link
               href={{
-                pathname: "/review",
+                pathname: "/review_page",
                 params: {
                   language: language
                 }
@@ -145,4 +145,4 @@ const styles = {
   },
 };
 
-export default Categories;
+export default categories_page;

@@ -3,15 +3,15 @@ import { Canvas, PaintStyle, Fill, Path, Skia, SkPath, SkPaint } from "@shopify/
 import { View } from 'react-native';
 import React from 'react';
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { FlashcardProps } from "./Flashcard";
-import { RawDelta } from "./DrawingBoard";
+import { FlashcardProps } from "./FlashcardVocabSide";
+import { RawDelta } from "./FlashcardDrawingSide";
 
 type Delta = {
   path: SkPath;
   paint: SkPaint;
 };
 
-const ImageDisplay = (props: FlashcardProps) => {
+const FlashcardReview = (props: FlashcardProps) => {
   const [deltas, setDeltas] = useState<Delta[]>([]);
 
   useEffect(() => { pull(); }, [props.eWord]);
@@ -72,4 +72,4 @@ const styles = {
   }
 }
 
-export default ImageDisplay;
+export default FlashcardReview;

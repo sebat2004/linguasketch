@@ -1,5 +1,5 @@
 import { Button, Text, View } from 'react-native'
-import ImageDisplay from '../components/ImageDisplay'
+import FlashcardReview from '../components/FlashcardReview'
 import { useState, useEffect, useRef } from 'react'
 import { useLocalSearchParams, Stack } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -19,7 +19,7 @@ const shuffle = (array: string[]) => {
   return array;
 };
 
-const review = () => {
+const review_page = () => {
   const [index, setIndex] = useState(0);
   const [words, setWords] = useState<string[]>([]);
   const [answer, setAns] = useState<string>('');
@@ -93,6 +93,6 @@ const review = () => {
   )
 }
 
-export default review
+export default review_page
 
 

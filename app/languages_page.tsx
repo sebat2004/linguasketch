@@ -5,7 +5,7 @@ import { Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const Languages = () => {
+const languages_page = () => {
   const [language, setLanguage] = useState('spanish');
 
   const clear = async () => {
@@ -23,7 +23,7 @@ const Languages = () => {
           <View style={{flex: 1, marginHorizontal: "auto", width: "100%", alignItems: 'center'}}>
             <Link
               href={{
-                pathname: "/categories",
+                pathname: "/categories_page",
                 params: { language: 'Spanish' }
               }}
               style={styles.flag}
@@ -33,7 +33,7 @@ const Languages = () => {
             </Link>
             <Link 
               href={{
-                pathname: "/categories",
+                pathname: "/categories_page",
                 params: { language: 'French' }
               }}
               style={styles.flag}
@@ -43,7 +43,7 @@ const Languages = () => {
             </Link>
             <Link 
               href={{
-                pathname: "/categories",
+                pathname: "/categories_page",
                 params: { language: 'Chinese' }
               }}
               style={styles.flag}
@@ -53,7 +53,7 @@ const Languages = () => {
             </Link>
             <Link 
               href={{
-                pathname: "/categories",
+                pathname: "/categories_page",
                 params: { language: 'German' }
               }}
               style={styles.flag}
@@ -63,7 +63,7 @@ const Languages = () => {
             </Link>
             <Link 
               href={{
-                pathname: "/categories",
+                pathname: "/categories_page",
                 params: { language: 'Korean' }
               }}
               style={{...styles.flag, marginTop: 20}}
@@ -73,7 +73,7 @@ const Languages = () => {
             </Link>
             {/* <Link 
               href={{
-                pathname: "/categories",
+                pathname: "/categories_page",
                 params: { language: 'Korean' }
               }}
               style={{...styles.flag, marginTop: 20}}
@@ -116,4 +116,4 @@ const styles = {
   },
 };
 
-export default Languages;
+export default languages_page;

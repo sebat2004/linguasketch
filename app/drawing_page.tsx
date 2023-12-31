@@ -1,14 +1,14 @@
 import { Button, View } from 'react-native'
-import Flashcard from '../components/Flashcard'
+import FlashcardVocabSide from '../components/FlashcardVocabSide'
 import { useEffect, useState } from 'react'
-import DrawingBoard from '../components/DrawingBoard'
+import FlashcardDrawingSide from '../components/FlashcardDrawingSide'
 import { useLocalSearchParams, Stack } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import CustomHeader from '../components/CustomHeader'
 import vocab from './vocab.json'
 import { Text } from 'react-native'
 
-const drawing = () => {
+const drawing_page = () => {
   const [isFlipped, setIsFlipped] = useState(false)
   const [refresh, setRefresh] = useState(false);
   const [word, setWord] = useState('')
@@ -47,9 +47,9 @@ const drawing = () => {
         }
         <View style={{alignItems: 'center', justifyContent: 'flex-start', height: 350, marginBottom: 80}}>
           {
-            isFlipped ? <DrawingBoard {...{language: language, word: word, category: category, eWord: eWord}}/> 
+            isFlipped ? <FlashcardDrawingSide {...{language: language, word: word, category: category, eWord: eWord}}/> 
             : 
-            <Flashcard category={category} language={language} word={word} eWord={eWord} />
+            <FlashcardVocabSide category={category} language={language} word={word} eWord={eWord} />
           }
         </View>
         <View style={{marginBottom: "1%"}}>
@@ -61,6 +61,6 @@ const drawing = () => {
   )
 }
 
-export default drawing
+export default drawing_page
 
 

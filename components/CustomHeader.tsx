@@ -12,7 +12,7 @@ const CustomHeader = (props) => {
     return (
       <View style={{width: "100%", height: 55, justifyContent: 'flex-end', backgroundColor: "#F4EBE4"}}>
         <Link href={
-          {pathname: "/languges"}
+          {pathname: "/languages_page"}
         } style={{fontSize: 20, paddingLeft: 15}}><AntDesign name="caretleft" size={25} color="black" /></Link>
       </View>
     )
@@ -21,7 +21,7 @@ const CustomHeader = (props) => {
     <View style={{width: "100%", height: 50, justifyContent: 'center', backgroundColor: "#F4EBE4"}}>
         <Link href={
           {
-            pathname: "/categories",
+            pathname: "/categories_page",
             params: { language: language }
           }
         } style={{fontSize: 20, paddingLeft: 20}}><AntDesign name="caretleft" size={25} color="black" /></Link>

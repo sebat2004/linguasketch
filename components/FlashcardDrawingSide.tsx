@@ -42,7 +42,7 @@ const eraserPaint = () => {
   return paint;
 }
 
-const DrawingBoard = (props: FlashcardProps) => {
+const FlashcardDrawingSide = (props: FlashcardProps) => {
   const ref = useCanvasRef();
   const [deltas, setDeltas] = useState<Delta[]>([]);
   const cPaint = useRef<SkPaint>(penPaint());
@@ -148,4 +148,4 @@ const DrawingBoard = (props: FlashcardProps) => {
 }
 
 export type { RawDelta };
-export default DrawingBoard;
+export default FlashcardDrawingSide;

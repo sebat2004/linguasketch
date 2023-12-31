@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons';
 
-const landing = () => {
+const landing_page = () => {
     return (
         <>
           <LinearGradient
@@ -19,7 +19,7 @@ const landing = () => {
             />
             <Text style={{fontSize: 40, fontWeight: '300', marginTop: 100, alignSelf: 'center'}}>LinguaSketch</Text>
             <Ionicons/>
-            <Link href="/languges" 
+            <Link href="/languages_page" 
               style={{
                 overflow: 'hidden',
                 alignSelf: 'center', 
@@ -61,4 +61,4 @@ const landing = () => {
     });
     
 
-export default landing
+export default landing_page
