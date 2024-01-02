@@ -75,7 +75,7 @@ const review_page = () => {
       <CustomHeader language={language} category={category} />
       <SafeAreaView style={{backgroundColor: '#F4EBE4', alignItems: 'center'}}>
         <Text style={{fontSize: 40, marginBottom: 20, color: '#695648', fontWeight: 'bold'}}>Review!</Text>
-        <ImageDisplay {...{language: language, eWord: words[index], word: words[index], category: category}}/> 
+        <FlashcardReview {...{language: language, eWord: words[index], word: words[index], category: category}}/> 
         <View style={{paddingTop: 50, alignItems: 'center'}}>
           <Text style={{fontSize: 25, fontWeight: 600}}>Current Word</Text>
           <Text style={{fontSize: 20, fontWeight: 400}}>{words[index]}</Text>
